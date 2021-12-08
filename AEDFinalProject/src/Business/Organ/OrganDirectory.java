@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package business.enterprise;
+package Business.Organ;
 
 /**
  *
  * @author sandeepbarla
  */
-public class Hospital {
+public class OrganDirectory {
     
 }
