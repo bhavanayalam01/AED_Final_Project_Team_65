@@ -130,10 +130,7 @@ public class TestDataJPanel extends javax.swing.JPanel {
                 }
             }
         
-        }
-        
-        
-      
+        }    
     return test;
     }
    
@@ -145,7 +142,6 @@ public class TestDataJPanel extends javax.swing.JPanel {
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
