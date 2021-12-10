@@ -10,11 +10,15 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Therapists;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.TherapistWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sandeepbarla
+ * @author bhavana <your.name at your.org>
  */
 public class TherapistWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -36,6 +40,7 @@ public class TherapistWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise=enterprise;
         this.ecosystem=ecosystem;
         this.network=network;
+        initTable();
     }
 
     /**
@@ -47,19 +52,144 @@ public class TherapistWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_patients = new javax.swing.JTable();
+        btn_Assign = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(1200, 800));
+
+        tbl_patients.setBackground(new java.awt.Color(255, 204, 204));
+        tbl_patients.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tbl_patients.setForeground(new java.awt.Color(255, 51, 51));
+        tbl_patients.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Patient ID", "Patient Name", "Doctor name", "Request Date", "Therapist", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tbl_patients.setSelectionBackground(new java.awt.Color(255, 153, 153));
+        tbl_patients.setSelectionForeground(new java.awt.Color(255, 255, 0));
+        jScrollPane1.setViewportView(tbl_patients);
+
+        btn_Assign.setBackground(new java.awt.Color(204, 204, 204));
+        btn_Assign.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Assign.setForeground(new java.awt.Color(255, 0, 51));
+        btn_Assign.setText("Assign me");
+        btn_Assign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AssignActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Transplant physicians");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(463, 463, 463)
+                        .addComponent(btn_Assign)))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(btn_Assign)
+                .addContainerGap(432, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+    public void initTable(){
+        DefaultTableModel model = (DefaultTableModel) tbl_patients.getModel();
+        model.setRowCount(0);
+        for (WorkRequest w:organization.getWorkQueue().getWorkRequestList()) {
+                Object[] row = new Object[6];
+                row[0] = ((TherapistWorkRequest)w).getPatient().getId();
+                row[1] = ((TherapistWorkRequest)w).getPatient().getName();
+                row[2] = w.getSender();
+                row[3] = w.getRequestDate();
+                row[4] = w.getReceiver();
+                row[5] = w.getStatus();
+                model.addRow(row);   
+        }                
+    }
+    
+    
+    private void btn_AssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AssignActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tbl_patients.getSelectedRow();
+
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Please select the request to assign");
+            return;
+        }
+
+        WorkRequest request = null;
+        for(WorkRequest w:organization.getWorkQueue().getWorkRequestList()){
+            if(Integer.parseInt(""+tbl_patients.getValueAt(tbl_patients.getSelectedRow(), 0))==((TherapistWorkRequest)w).getPatient().getId()){
+             request=w;
+             break;
+            }
+        }
+
+        if(request.getStatus().equalsIgnoreCase("Assigned")){
+            JOptionPane.showMessageDialog(null,"This patient is assigned");
+        }
+        request.setStatus("Assigned");
+        request.setReceiver(account);
+        initTable();
+        
+    }//GEN-LAST:event_btn_AssignActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Assign;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tbl_patients;
     // End of variables declaration//GEN-END:variables
 }
