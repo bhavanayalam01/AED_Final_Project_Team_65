@@ -181,13 +181,13 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.add(txt_username);
         txt_username.setBounds(440, 248, 250, 30);
 
-        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_username.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_username.setForeground(new java.awt.Color(255, 0, 51));
         lbl_username.setText("Username:");
         jPanel2.add(lbl_username);
         lbl_username.setBounds(312, 247, 110, 30);
 
-        lbl_password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_password.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_password.setForeground(new java.awt.Color(255, 0, 51));
         lbl_password.setText("Password:");
         jPanel2.add(lbl_password);
@@ -213,7 +213,7 @@ public class MainJFrame extends javax.swing.JFrame {
         btn_donor.setBackground(new java.awt.Color(255, 255, 255));
         btn_donor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_donor.setForeground(new java.awt.Color(255, 0, 51));
-        btn_donor.setText("Register to be a donar");
+        btn_donor.setText("Register to be a donor");
         btn_donor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_donorActionPerformed(evt);
