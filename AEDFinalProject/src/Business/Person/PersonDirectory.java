@@ -5,10 +5,26 @@
  */
 package Business.Person;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author bhavana
  */
 public class PersonDirectory {
+     List<Person> personList;
+    
+    PersonDirectory(){
+       personList = new ArrayList<Person>();
+    }
+
+    public List<Person> getPersonList() {
+        return personList;
+    }
+
+    public void setPersonList(List<Person> personList) {
+        this.personList = personList;
+    }
     
 }

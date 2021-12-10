@@ -7,14 +7,17 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Network.Network;
 import Business.Organization.Organization;
+import Business.Person.DonorDirectory;
+import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 
 /**
  *
  * @author bhavana
  */
-public class Role {
+public abstract class Role {
     public enum RoleType{
        Sysadmin("Syadmin") ,
        Admin("Admin"),

@@ -12,15 +12,17 @@ import Business.Organization.Organization;
 import Business.Person.DonorDirectory;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
+import ui.PatientRole.PatientJPanel;
 
 /**
  *
- * @author bhavana
+ * @author sandeepbarla
  */
-public class SystemAdminRole extends Role {
-     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system,Network network,  DonorDirectory donorDirectory) {
-        return new SystemAdminWorkAreaJPanel(userProcessContainer, system);
+public class Patient extends Role{
+
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network, DonorDirectory donorDirectory) {
+        return new PatientJPanel(userProcessContainer, enterprise);
     }
+
 }
