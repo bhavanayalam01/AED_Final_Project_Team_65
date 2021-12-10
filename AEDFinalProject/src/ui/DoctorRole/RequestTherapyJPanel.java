@@ -276,9 +276,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         if(!check){
             JOptionPane.showMessageDialog(null, "Select proper options (or) doctors not available");
             return;
-        }
-        
-        
+        }        
         TherapistWorkRequest request = new TherapistWorkRequest();
         request.setPatientAccount(p);
         Organization orga = null;
