@@ -13,7 +13,9 @@ import java.util.List;
  * @author bhavana
  */
 public class DonorDirectory {
-     private ArrayList<Donor> donorList;
+
+    private ArrayList<Donor> donorList;
+
 
     public DonorDirectory() {
         donorList = new ArrayList();
@@ -27,6 +29,7 @@ public class DonorDirectory {
     public ArrayList<Donor> getDonorList() {
         return donorList;
     }
+
     
     public Donor createDonor(int id,String name, int age, String sex, String bloodGroup, String contactNum, String address, String sign,
                 String emailAdd, String emergencyPOC, String emergencyPOC_Num, boolean isOrganAvaiNow, List<String >organs){
