@@ -1,8 +1,11 @@
 /*
+
  * To change this template, choose Tools | Templates
+
  * and open the template in the editor.
  */
 package ui;
+
 
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
@@ -25,12 +28,14 @@ import ui.DonorRole.DonorRegistrationFormJPanel;
 /**
  *
 * @author saikr
+
  */
 public class MainJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
+
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     //private EnterpriseDirectory enterpriseDirectory;
@@ -108,6 +113,7 @@ public class MainJFrame extends javax.swing.JFrame {
        //System.out.println(system.getNetworkList().get(0).getName());
        //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList());
         //System.out.println();
+
     }
 
     /**
@@ -118,6 +124,7 @@ public class MainJFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
@@ -235,8 +242,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
 
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
 
     private void btn_donorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_donorActionPerformed
       // TODO add your handling code here:
@@ -346,6 +355,7 @@ public class MainJFrame extends javax.swing.JFrame {
         txt_password.setEnabled(false);
     }//GEN-LAST:event_btn_loginActionPerformed
 
+
     /**
      * @param args the command line arguments
      */
@@ -380,6 +390,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_donor;
     private javax.swing.JButton btn_login;
@@ -394,5 +405,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loginJLabel;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
+
     // End of variables declaration//GEN-END:variables
 }

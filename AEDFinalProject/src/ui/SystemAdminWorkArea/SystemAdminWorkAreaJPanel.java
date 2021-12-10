@@ -6,6 +6,7 @@
 package ui.SystemAdminWorkArea;
 
 import Business.EcoSystem;
+
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
@@ -18,6 +19,7 @@ import javax.swing.tree.DefaultTreeModel;
 /**
  *
  * @author saikr
+
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -30,12 +32,14 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
+
         populateTree();
     }
     
     public void populateTree(){
         
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -189,5 +193,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane;
+
     // End of variables declaration//GEN-END:variables
 }
