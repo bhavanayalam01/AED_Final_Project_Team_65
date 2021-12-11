@@ -18,7 +18,7 @@ import Business.Person.Patient;
 import Business.Person.PatientDirectory;
 import Business.UserAccount.UserAccount;
 import Business.Waitlist.Wait;
-import Business.WorkQueue.OrganProcureWorkRequest;
+//import Business.WorkQueue.OrganProcureWorkRequest;
 import Business.WorkQueue.WorkQueue;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -125,7 +125,6 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         loginJLabel = new javax.swing.JLabel();
@@ -141,9 +140,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
 
-        jSplitPane1.setBorder(null);
         jSplitPane1.setDividerLocation(50);
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
@@ -165,7 +162,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_logout);
-        btn_logout.setBounds(1010, 10, 122, 25);
+        btn_logout.setBounds(1010, 10, 122, 23);
 
         jSplitPane1.setLeftComponent(jPanel1);
 
@@ -204,10 +201,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.add(txt_password);
         txt_password.setBounds(440, 288, 250, 30);
 
-        btn_login.setBackground(new java.awt.Color(255, 255, 255));
         btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_login.setForeground(new java.awt.Color(255, 0, 51));
-        btn_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login_24px.png"))); // NOI18N
         btn_login.setText("Login");
         btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +212,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.add(btn_login);
         btn_login.setBounds(500, 340, 110, 30);
 
-        btn_donor.setBackground(new java.awt.Color(255, 255, 255));
         btn_donor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_donor.setForeground(new java.awt.Color(255, 0, 51));
         btn_donor.setText("Register to be a donor");
@@ -241,7 +235,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jSplitPane1.setRightComponent(container);
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
-
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -405,6 +398,5 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loginJLabel;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
-
     // End of variables declaration//GEN-END:variables
 }
