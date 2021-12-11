@@ -7,22 +7,45 @@ package ui.ProcurementTeamRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Enterprise.OrganBankEnterprise;
 import Business.Network.Network;
+import Business.Organization.Facilities;
+import Business.Organization.OrganManagement;
 import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.OrganProcureWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sandeepbarla
+ * @author saikr
  */
 public class ProcurementTeamJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ProcurementTeamJPanel
      */
+     JPanel userProcessContainer;
+    OrganizationDirectory organizationDirectory; 
+    Enterprise enterprise;
+    EcoSystem ecoSystem;
+    UserAccount account;
+    Organization organization;
+    Network network;
+    
     public ProcurementTeamJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
         initComponents();
+        this.userProcessContainer=userProcessContainer;
+        this.enterprise=enterprise;
+        this.ecoSystem=business;
+        this.account = account;
+        this.organization =organization;
+        this.network=network;
+        populateTable();
     }
 
     /**
@@ -34,19 +57,207 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblworkRequest = new javax.swing.JTable();
+        btnInProcess = new javax.swing.JButton();
+        btnCompleted = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(1200, 800));
+
+        tblworkRequest.setBackground(new java.awt.Color(255, 204, 204));
+        tblworkRequest.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tblworkRequest.setForeground(new java.awt.Color(255, 0, 51));
+        tblworkRequest.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Patient", "Status", "Organs", "Patient", "Doctor"
+            }
+        ));
+        tblworkRequest.setSelectionBackground(new java.awt.Color(255, 153, 153));
+        tblworkRequest.setSelectionForeground(new java.awt.Color(255, 255, 0));
+        jScrollPane1.setViewportView(tblworkRequest);
+
+        btnInProcess.setBackground(new java.awt.Color(204, 204, 204));
+        btnInProcess.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnInProcess.setForeground(new java.awt.Color(255, 0, 51));
+        btnInProcess.setText("InProcess");
+        btnInProcess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInProcessActionPerformed(evt);
+            }
+        });
+
+        btnCompleted.setBackground(new java.awt.Color(204, 204, 204));
+        btnCompleted.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCompleted.setForeground(new java.awt.Color(255, 0, 51));
+        btnCompleted.setText("Completed");
+        btnCompleted.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompletedActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Procurement Team Dashboard");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnInProcess)
+                                .addGap(43, 43, 43)
+                                .addComponent(btnCompleted))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(375, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnInProcess, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCompleted, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnInProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInProcessActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+        int selectedRow = tblworkRequest.getSelectedRow();
+        if(selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Select request to Process", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        OrganProcureWorkRequest orgwr = (OrganProcureWorkRequest)tblworkRequest.getValueAt(selectedRow, 0);
+        boolean check;
+        check=orgwr.getTeam().equalsIgnoreCase(organization.getName());
+                
+        if(!check){
+            JOptionPane.showMessageDialog(null, "This task is assigned to other team");
+            return;
+        }
+        if(orgwr.getStatus().equals("Assigned")){
+        
+          orgwr.setStatus("InProcess");  
+        }
+        
+    
+      
+     populateTable();
+  
+        
+    }//GEN-LAST:event_btnInProcessActionPerformed
+
+    private void btnCompletedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompletedActionPerformed
+        // TODO add your handling code here:
+       int selectedRow = tblworkRequest.getSelectedRow();
+        if(selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Select request to Complete", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        OrganProcureWorkRequest orgwr = (OrganProcureWorkRequest)tblworkRequest.getValueAt(selectedRow, 0);
+        if(!orgwr.getStatus().equals("InProcess")){
+        JOptionPane.showMessageDialog(null,"Request should be InProcess", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        
+        }
+        
+      
+       
+           
+           
+         
+                   if(organization instanceof Facilities){
+                       orgwr.setStatus("Completed");
+
+                   ((Facilities) organization).setCounter(0);}
+                   
+               
+           
+           
+            
+        
+    
+      
+     populateTable();  
+    }//GEN-LAST:event_btnCompletedActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCompleted;
+    private javax.swing.JButton btnInProcess;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblworkRequest;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable() {
+         DefaultTableModel model = (DefaultTableModel) tblworkRequest.getModel();
+         model.setRowCount(0);
+         for(Network n: ecoSystem.getNetworkList()){
+            if(n.getName().equalsIgnoreCase(network.getName())){
+            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
+                if(e instanceof OrganBankEnterprise){
+                   
+                    if(e.getWorkQueue()== null){
+                        System.out.println("catched by repears");
+                      break;}
+                    for(WorkRequest wr: e.getWorkQueue().getWorkRequestList()){
+                        
+                        if( wr.getStatus().equals("Assigned")|| wr.getStatus().equals("InProcess")|| wr.getStatus().equals("Completed")){
+                            OrganProcureWorkRequest opr = (OrganProcureWorkRequest)wr;
+                            System.out.println("In Ark space ship");
+                            String a ="";
+                            for( String s: opr.getOrganList()){
+                                a= s+":"+a;
+                            }
+                            Object[] row = new Object[80];
+                        row[0]= opr;
+                        row[1] = opr.getMessage();
+                        
+                        row[1] = opr.getStatus();
+                        row[2] = a;
+                        
+                        row[3] = opr.getPatient().getName();
+                        row[4] = opr.getPatient().getDoctor();
+                        model.addRow(row);
+                       
+                        }
+                      
+                     
+                    
+                    }
+                }
+            }
+            }
+        }
+    }
 }

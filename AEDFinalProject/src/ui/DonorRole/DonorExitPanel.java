@@ -3,21 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.PatientRole;
-
-import Business.Enterprise.Enterprise;
-import javax.swing.JPanel;
+package userinterface.DonorRole;
 
 /**
  *
  * @author bhavana
  */
-public class PatientJPanel extends javax.swing.JPanel {
+public class DonorExitPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form PatientJPanel
+     * Creates new form DonorExitPanel
      */
-    public PatientJPanel(JPanel userProcessContainer, Enterprise enterprise) {
+    public DonorExitPanel() {
         initComponents();
     }
 
@@ -30,19 +27,17 @@ public class PatientJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabel1 = new javax.swing.JLabel();
+
+        setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/organ_donation_bg_1670_1080.jpg"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(0, 0, 1670, 1080);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

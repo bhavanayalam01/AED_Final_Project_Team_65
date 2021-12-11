@@ -7,6 +7,7 @@ package ui.DonorRole;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+
 import Business.Person.Donor;
 import Business.Person.DonorDirectory;
 import java.awt.CardLayout;
@@ -20,6 +21,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -28,6 +30,7 @@ import javax.swing.JPanel;
 * @author saikr
  */
 public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
+
 
     JPanel userProcessContainer;
     String emailAdd;
@@ -427,7 +430,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        //organization.getEmployeeDirectory().createEmployee(name);
+
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
@@ -504,6 +507,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
        
 int f = 0;
         String name = txtName.getText();
+
         String sex;
         emailAdd = txtEmailId.getText();
         if (radMale.isSelected()) {
@@ -517,11 +521,8 @@ int f = 0;
         String emergencyPOC = txtEmergencyName.getText();
         String emergencyPOC_Num = txtEmergencyContact.getText();
         String sign = txtSignature.getText();
+
         int age = 30;
-        
-        
-        
-        
         boolean isOrganAvaiNow = false;
         if (radOrganAvailYes.isSelected()) {
             isOrganAvaiNow = true;
@@ -541,6 +542,7 @@ int f = 0;
             return;
         }
         
+
        if(contactNumber == null || contactNumber.equals("")){
                 JOptionPane.showMessageDialog(null, "Please enter Contact Number");
                 return;
@@ -585,6 +587,7 @@ int f = 0;
         }
 
         Donor d = ecosystem.createDonor(name, age, sex, bloodGroup, contactNumber, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
+
         dB4OUtil.storeSystem(ecosystem);
         JOptionPane.showMessageDialog(null, "Thanks for donation");
         popuser();
@@ -593,6 +596,7 @@ int f = 0;
             JOptionPane.showConfirmDialog(null, "Please enter the right details");
 
         }
+
 
     }//GEN-LAST:event_btnRegister1ActionPerformed
 
