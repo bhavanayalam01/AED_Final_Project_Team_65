@@ -163,7 +163,6 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         btnCreate.setBackground(new java.awt.Color(204, 204, 204));
         btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCreate.setForeground(new java.awt.Color(255, 51, 51));
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CreateEmployee.png"))); // NOI18N
         btnCreate.setText("Add");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +192,6 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         backJButton.setBackground(new java.awt.Color(204, 204, 204));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 0, 51));
-        backJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back3.png"))); // NOI18N
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,7 +213,6 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         updateJbutton.setBackground(new java.awt.Color(204, 204, 204));
         updateJbutton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         updateJbutton.setForeground(new java.awt.Color(255, 51, 51));
-        updateJbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/update.png"))); // NOI18N
         updateJbutton.setText("Update");
         updateJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +223,6 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         btnSave.setBackground(new java.awt.Color(204, 204, 204));
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSave.setForeground(new java.awt.Color(255, 51, 51));
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save_24px.png"))); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

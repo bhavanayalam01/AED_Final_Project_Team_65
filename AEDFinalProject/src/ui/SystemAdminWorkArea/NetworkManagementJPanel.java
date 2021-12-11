@@ -46,8 +46,8 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
         for (Network network : system.getNetworkList()) {
             Object[] row = new Object[3];
             row[0] = network.getName();
-            row[1] = network.getState();
-            row[2] = network.getZipcode();
+//            row[1] = network.getState();
+//            row[2] = network.getZipcode();
             model.addRow(row);
         }
     }
