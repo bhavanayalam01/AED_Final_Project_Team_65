@@ -2,32 +2,23 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.DoctorRole;
+package ui.DoctorRole;
 
 import Business.EcoSystem;
-import Business.Employee.Employee;
 import Business.Enterprise.*;
 import Business.Network.Network;
 import Business.Organization.Medical;
-import Business.Organization.OrganManagement;
 import Business.Organization.Organization;
 import Business.Person.Patient;
 import Business.UserAccount.UserAccount;
-import Business.Waitlist.Wait;
 import Business.WorkQueue.DiagnosticsWorkRequest;
 import Business.WorkQueue.OrganMatchWorkRequest;
 import Business.WorkQueue.OrganProcureWorkRequest;
 import Business.WorkQueue.TherapistWorkRequest;
-import Business.WorkQueue.WaitlistWorkRequest;
 import Business.WorkQueue.WorkRequest;
-import com.db4o.User;
 import java.awt.CardLayout;
-import java.awt.Desktop;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -63,7 +54,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         lblAge.setVisible(false);
         lblName1.setVisible(false);
         txtName.setVisible(false);
-		        requestTestJButton.setVisible(false);
+	requestTestJButton.setVisible(false);
         
         
         cb_patients();
@@ -77,8 +68,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         cb_patients.addItem("--Select");
         for(int i=0;i<organization.getPatientDirectory().getPatientList().size();i++){
             if((organization.getPatientDirectory().getPatientList().get(i).getDoctor().equalsIgnoreCase(userAccount.getEmployee().getName()))&&organization.getPatientDirectory().getPatientList().get(i).isAlive()){
-                //System.out.println(organization.getPatientDirectory().getPatientList().get(i).getDoctor());
-                //System.out.println(organization.getPatientDirectory().getPatientList().get(i).getName());
                 cb_patients.addItem(organization.getPatientDirectory().getPatientList().get(i).getId()+" : "+organization.getPatientDirectory().getPatientList().get(i).getName());
             }
         }
@@ -122,7 +111,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             int counter=0;
             for(Network n: ecosystem.getNetworkList()){
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e instanceof TherapyEnterprise){
+                    if(e instanceof Therapy){
                         for(Organization o:e.getOrganizationDirectory().getOrganizationList()){
                             for(WorkRequest w:o.getWorkQueue().getWorkRequestList()){
                                 if(((TherapistWorkRequest)w).getPatient().getId()==((DiagnosticsWorkRequest) request).getPatient().getId()){
@@ -575,16 +564,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Select a patient");
             return;
         }
-        
-        
-        
-        
-        
-        
-        
         Patient p=patAccount(workRequestJTable.getValueAt(workRequestJTable.getSelectedRow(), 0).toString());
-       
-        
         RequestOrganJpanel tdj=new RequestOrganJpanel(userProcessContainer,organization, userAccount,p,ecosystem,enterprise,network);
         userProcessContainer.add("Lab test",tdj);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
@@ -708,7 +688,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         int dup=0;
         for(Network n:ecosystem.getNetworkList()){
             for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                if(e instanceof OrganBankEnterprise){
+                if(e instanceof OrganBank){
                     for(WorkRequest w: e.getWorkQueue().getWorkRequestList()){
                         if(w instanceof OrganProcureWorkRequest){
                             if(((OrganProcureWorkRequest) w).getPatient().getId()==chkpat.getId()){
@@ -727,12 +707,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "The procurement for this patient is already requested");
             return;
         }
-        
-        
-        
-        
-        
-        
         request.setSender(userAccount);
         request.setStatus("Procurement Requested");
         
@@ -758,7 +732,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         for(Network n: ecosystem.getNetworkList()){
             if(n.getName().equalsIgnoreCase(network.getName())){
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e instanceof OrganBankEnterprise){
+                    if(e instanceof OrganBank){
                         ent=e;
                         if(loopcounter>0){
                             ent.getWorkQueue().getWorkRequestList().add(mr);

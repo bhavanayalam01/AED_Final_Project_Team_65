@@ -1,12 +1,11 @@
 
 
-package userinterface.AdministrativeRole;
+package ui.AdministrativeRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import java.awt.CardLayout;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -19,7 +18,11 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     Enterprise enterprise;
     EcoSystem ecoSystem;
     Network network;
-    /** Creates new form AdminWorkAreaJPanel */
+    /** Creates new form AdminWorkAreaJPanel
+     * @param userProcessContainer
+     * @param enterprise
+     * @param ecoSystem
+     * @param network */
     public AdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise,EcoSystem ecoSystem,Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;

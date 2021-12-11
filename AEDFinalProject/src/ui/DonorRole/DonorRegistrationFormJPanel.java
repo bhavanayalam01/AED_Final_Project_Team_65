@@ -7,16 +7,9 @@ package ui.DonorRole;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
-import Business.Employee.EmployeeDirectory;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-//import Business.Organization.DonorOrganization;
-//import Business.Organization.OrganTissueDonationOrganization;
-import Business.Organization.Organization;
 import Business.Person.Donor;
 import Business.Person.DonorDirectory;
 import java.awt.CardLayout;
-import java.net.PasswordAuthentication;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -27,12 +20,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-//import javax.mail.Message;
-//import javax.mail.Session;
-//import javax.mail.Transport;
-//import javax.mail.internet.InternetAddress;
-//import javax.mail.internet.MimeMessage;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -41,18 +28,15 @@ import javax.swing.JPanel;
 * @author saikr
  */
 public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
-    // Organization organization;
 
     JPanel userProcessContainer;
     String emailAdd;
     EcoSystem ecosystem;
     String city;
     DB4OUtil dB4OUtil;
-    //DonorOrganization organization;
     DonorDirectory donorDirectory;
     List<String> userList = new ArrayList<String>();
-//        EmployeeDirectory employeeD;
-//        
+    
     /**
      * Creates new form DonorRegistrationFormJPanel
      */
@@ -60,11 +44,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
     public DonorRegistrationFormJPanel(JPanel userProcessContainer, EcoSystem system, DonorDirectory donorDirectory, DB4OUtil dB4OUtil) {
         initComponents();
-        //this.organization = organization;
         this.userProcessContainer = userProcessContainer;
-        // this.emailAdd=email;
-        //txtEmailId.setText(email);
-        //txtContactDonor.setText();
         txtCity.setText(city);
         txtCity.setEnabled(false);
         this.ecosystem = system;
@@ -72,9 +52,6 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         this.donorDirectory = donorDirectory;
         this.dB4OUtil = dB4OUtil;
         popuser();
-//        this.employeeD = new EmployeeDirectory();
-//        System.out.println("Donor Direcotry"+donorDirectory.getDonorList());
-//                System.out.println("Emp Direcotry"+employeeD.getEmployeeList());
     }
 
     public void popuser() {
@@ -437,13 +414,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSignatureActionPerformed
 
     private void organJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organJComboBoxActionPerformed
-//            JLabel newLabel = new JLabel();
-//            //labels.add(newLabel);
-//            newLabel.setBounds(0, 0, 200, 200);
-//            newLabel.setText("hello");
-//            add(newLabel);
 
-        //validate();
         String selectedOrgan = organJComboBox.getSelectedItem().toString();
         organList.add((String) organJComboBox.getSelectedItem());
         if ("".equals(lblOrgan1.getText())) {
@@ -505,8 +476,6 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         boolean bool = matcher.matches();
         if (!bool) {
             return true;
-            //JOptionPane.showMessageDialog(null,"Invalid phone number format");
-//            return false;
         } else {
 
             return true;
@@ -535,7 +504,6 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
        
 int f = 0;
         String name = txtName.getText();
-        //String lastname= txtName1.getText();
         String sex;
         emailAdd = txtEmailId.getText();
         if (radMale.isSelected()) {
@@ -549,7 +517,6 @@ int f = 0;
         String emergencyPOC = txtEmergencyName.getText();
         String emergencyPOC_Num = txtEmergencyContact.getText();
         String sign = txtSignature.getText();
-        //int age =Integer.parseInt(txtAge.getText());
         int age = 30;
         
         
@@ -574,7 +541,6 @@ int f = 0;
             return;
         }
         
-        //String contactNumber=(phoneJTextField.getText());
        if(contactNumber == null || contactNumber.equals("")){
                 JOptionPane.showMessageDialog(null, "Please enter Contact Number");
                 return;
@@ -585,19 +551,7 @@ int f = 0;
                      return;
                  }
              }
-        
-        
-        
-        
-        
-        
-        
-        
-//        if (valPhone(contactNum)) {
-//            f++;
-//        } else {
-//            return;
-//        }
+
         if (usernamePatternCorrect(emailAdd)) {
             f++;
         } else {
@@ -631,8 +585,6 @@ int f = 0;
         }
 
         Donor d = ecosystem.createDonor(name, age, sex, bloodGroup, contactNumber, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
-        //ecosystem.getDonorDirectory().add(d);
-        //JOptionPane.showMessageDialog(null, "Thank you for registering with us!!");
         dB4OUtil.storeSystem(ecosystem);
         JOptionPane.showMessageDialog(null, "Thanks for donation");
         popuser();
@@ -641,64 +593,6 @@ int f = 0;
             JOptionPane.showConfirmDialog(null, "Please enter the right details");
 
         }
-         try {
-            final String username = "saikrishnakotla125@gmail.com";
-            final String password = "7382052184";
-
-            Properties props = new Properties();
-            
-          
-            
-            
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
-            props.put("mail.smtp.host", "smtp.gmail.com");
-            props.put("mail.smtp.port", "587");
-
-            Session session = Session.getInstance(props, new javax.mail.Authenticator() {
-                protected javax.mail.PasswordAuthentication getPasswordAuthentication()  {
-                    if ((username != null) && (username.length() > 0) && (password != null)
-                            && (password.length() > 0)) {
-
-                        return new javax.mail.PasswordAuthentication(username, password);
-                    }
-                    return null;
-
-                }
-            });
-
-            try {
-                Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress("saikrishnakotla125@gmail.com"));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailAdd));
-                message.setSubject("Thank you");
-                message.setText("Thanks for donation");
-                Transport.send(message);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Some Exception Occurred!");
-            }
-
-        } catch (NullPointerException ex) {
-            JOptionPane.showMessageDialog(null, "Null Pointer Exception Occurred!");
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Some Exception Occurred!");
-        }
-
-
-        //  ArrayList<String> organDirectory = new ArrayList<String>();
-        //String uname = usernameText.getText();
-//        if(Heart.isSelected()){
-//            SorganDirectory.add("Heart");
-//        } 
-//        if(Lungs.isSelected()){
-//            SorganDirectory.add("Lungs");
-//        }
-        //Donor donor = new Donor();
-        //donorDirectory.createDonor(name, age, sex, address, contactNum, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
-
-
-
-
 
     }//GEN-LAST:event_btnRegister1ActionPerformed
 

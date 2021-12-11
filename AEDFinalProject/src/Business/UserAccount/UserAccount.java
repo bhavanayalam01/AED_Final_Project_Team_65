@@ -24,7 +24,6 @@ public class UserAccount {
     private String qualifications;
     private String profile;
     private int age;
-    //public Date date;
     private String sex;
     private boolean isAvailable;
     private boolean isAvailableforOrgan;

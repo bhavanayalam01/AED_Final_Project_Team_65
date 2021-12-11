@@ -6,7 +6,6 @@
 package Business.Organization;
 
 import Business.Role.Doctor;
-import Business.Role.LabAssistant;
 import Business.Role.Role;
 import java.util.ArrayList;
 

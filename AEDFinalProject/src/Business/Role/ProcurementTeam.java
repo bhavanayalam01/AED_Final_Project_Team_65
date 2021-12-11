@@ -9,14 +9,11 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Facilities;
-import Business.Organization.Medical;
-import Business.Organization.OrganManagement;
 import Business.Organization.Organization;
 import Business.Person.DonorDirectory;
 import Business.UserAccount.UserAccount;
 import ui.ProcurementTeamRole.ProcurementTeamJPanel;
 import javax.swing.JPanel;
-import ui.DoctorRole.DoctorWorkAreaJPanel;
 
 /**
  *

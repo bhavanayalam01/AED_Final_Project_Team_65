@@ -13,7 +13,6 @@ public class Organ {
     private String organ_type;
     private String blood_type;
     private boolean available;
-    private String Network;
 
     public Organ(String organ_type, String blood_type) {
         this.organ_type = organ_type;

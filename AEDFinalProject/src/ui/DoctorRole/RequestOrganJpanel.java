@@ -3,24 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.DoctorRole;
+package ui.DoctorRole;
 
-import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Medical;
 import Business.Organization.Organization;
 import Business.Person.Patient;
-import Business.Ranking;
 import Business.UserAccount.UserAccount;
 import Business.Waitlist.Wait;
 import java.awt.CardLayout;
-import java.awt.Component;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -254,7 +248,6 @@ public class RequestOrganJpanel extends javax.swing.JPanel {
         }
         
 
-        //Patient patient, String age, String ped, String survival, String urgency, String organ, int waitlist
         int score=0;
         if(ecoSystem.getWaitList().size()<1){
             score=calculateScore();
@@ -277,7 +270,6 @@ public class RequestOrganJpanel extends javax.swing.JPanel {
         
         
         
-        //JPanel userProcessContainer, UserAccount account, Medical organization, Enterprise enterprise, EcoSystem ecosystem, Network network
         DoctorWorkAreaJPanel rlt=new DoctorWorkAreaJPanel(userProcessContainer, userAccount,(Medical) org,enterprise,ecoSystem,network);
         rlt.initwaitTable();
         userProcessContainer.add("Lab test",rlt);
