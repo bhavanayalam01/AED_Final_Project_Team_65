@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.DoctorRole;
+package ui.DoctorRole;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
