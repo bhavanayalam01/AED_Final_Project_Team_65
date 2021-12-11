@@ -1,13 +1,11 @@
 
 
-package userinterface.AdministrativeRole;
+package ui.AdministrativeRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.WorkQueue.WorkQueue;
 import java.awt.CardLayout;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**

@@ -6,18 +6,14 @@ package ui.DoctorRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.HospitalEnterprise;
+import Business.Enterprise.Hospital;
 import Business.Network.Network;
-import Business.Organization.Diagnostics;
 import Business.Organization.Medical;
 import Business.Organization.Organization;
 import Business.Person.Patient;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.DiagnosticsWorkRequest;
 import java.awt.CardLayout;
-import java.awt.Component;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -286,8 +282,6 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
         
         String message = messageJTextField.getText();
-        //String pname = txtAge.getText();
-        //String pid = pidText.getText();
         int f=0;
      
         
@@ -300,9 +294,6 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             return;
         }
         request.setMessage(message);
-      //  request.setSender(us);
-       // request.setPatient_Name(pname);
-        //request.setPatient_id(pid);
         if(bloodtyping.isSelected()){
                f=1;
             request.getTests().add("Blood Typing");
@@ -352,34 +343,16 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         request.setStatus("Sent");
         
         Organization org = null;
-        //System.out.println(enterprise.getOrganizationDirectory().getOrganizationList()+"yay");
         Enterprise e=null;
         
         for(Enterprise ent: network.getEnterpriseDirectory().getEnterpriseList()){
-            if(ent instanceof HospitalEnterprise&&ent.getName().equalsIgnoreCase(enterprise.getName())){
+            if(ent instanceof Hospital&&ent.getName().equalsIgnoreCase(enterprise.getName())){
                 e=ent;
                 ent.getWorkQueue().getWorkRequestList().add(request);
                 userAccount.getWorkQueue().getWorkRequestList().add(request);
             }
         }
         
-        
-        /*for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
-            if (organization instanceof Diagnostics){
-                org = organization;
-                System.out.println(org+" and work request"+org.getWorkQueue().getWorkRequestList());
-                org.getWorkQueue().getWorkRequestList().add(request);
-                userAccount.getWorkQueue().getWorkRequestList().add(request);
-                break;
-            }
-        }*/
-        /*JOptionPane.showMessageDialog(null, org.getName());
-        if (org!=null){
-            
-            System.out.println(org+" and work request"+org.getWorkQueue().getWorkRequestList());
-            org.getWorkQueue().getWorkRequestList().add(request);
-            userAccount.getWorkQueue().getWorkRequestList().add(request);
-        }*/
         
         if(f==0){
             JOptionPane.showMessageDialog(null, "Please fill the details");
@@ -396,15 +369,6 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_requestTestJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        
-        /*userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        DoctorWorkAreaJPanel dwjp = (DoctorWorkAreaJPanel) component;
-        //dwjp.populateRequestTable();
-        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);*/
-        
         
         DoctorWorkAreaJPanel sa=new DoctorWorkAreaJPanel(userProcessContainer,userAccount,organization,enterprise,ecosystem,network);
         userProcessContainer.add("Customer Adding",sa);

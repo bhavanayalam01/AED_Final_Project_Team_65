@@ -10,13 +10,11 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.AwarnessCampaign;
-//import Business.Organization.AwarnessEventManagementOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import ui.EventOrganizerRole.EventOrganizerWorkAreaJPanel;
-//import userinterface.EventOrganizerRole.EventOrganizerWorkAreaJPanel;
-//import userinterface.MedicalDirectorWorkArea.MedicalDirectorWorkAreaJPanel.MedicalDirectorWorkAreaJPanel;
+
 
 /**
  *

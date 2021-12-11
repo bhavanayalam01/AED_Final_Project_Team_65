@@ -53,7 +53,6 @@ public class EnterpriseManagementJPanel extends javax.swing.JPanel {
     private boolean checkEnterprise(Enterprise.EnterpriseType type) {
         ArrayList<Enterprise.EnterpriseType> estEnterprises = new ArrayList<Enterprise.EnterpriseType>();
         for (Network network : system.getNetworkList()) {
-            //  networkJComboBox.addItem(network);
             if (network == cb_addnetwork.getSelectedItem()) {
                 for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                     estEnterprises.add(enterprise.getEnterpriseType());

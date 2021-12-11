@@ -14,11 +14,7 @@ import Business.Enterprise.*;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Person.DonorDirectory;
-import Business.Person.Patient;
-import Business.Person.PatientDirectory;
 import Business.UserAccount.UserAccount;
-import Business.Waitlist.Wait;
-//import Business.WorkQueue.OrganProcureWorkRequest;
 import Business.WorkQueue.WorkQueue;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -38,7 +34,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    //private EnterpriseDirectory enterpriseDirectory;
      private DonorDirectory donorDirectory;
     public MainJFrame() {
         initComponents();
@@ -60,59 +55,6 @@ public class MainJFrame extends javax.swing.JFrame {
         if(system.getWorkQueue()==null){
             system.setWorkQueue(new WorkQueue());
         }
-       
-
-        
-        
-        
-        //JOptionPane.showMessageDialog(null,system.getDonorDirectory().size());
-        //JOptionPane.showMessageDialog(null, system.getWaitList().size());
-        //system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(1).getOrganizationDirectory().getOrganizationList().get(0).setPatientDirectory(new PatientDirectory());
-        /*System.out.println(system.getPatientId());
-        System.out.println(system.getEmployeeId());
-        System.out.println(system.getDonorId());
-        System.out.println(system.getPatientDirectory().getPatientList());
-        */
-        //system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).setWorkQueue(new WorkQueue());
-       //System.out.println(system.getNetworkList());
-       /*System.out.println(system.getWaitList().get(1).getPatient().getName());
-       System.out.println(system.getWaitList().get(1).getUrgency());
-       System.out.println(system.getWaitList().get(1).getWaitlist());
-       System.out.println(system.getWaitList().get(1).getPatient().getDoctor());
-       
-       
-       
-       
-       System.out.println(system.getDonorDirectory().size());*/
-        /*System.out.println("*******************************************************");
-       for(Network n: system.getNetworkList()){
-            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                System.out.println(e.getEnterpriseType().getValue());
-                if(e.getEnterpriseType().getValue().equalsIgnoreCase("Organ Bank")){
-                    //System.out.println(e.getWorkQueue().getWorkRequestList().get(0).getSender());
-                    
-                    //System.out.println("YAY "+e.getWorkQueue().getWorkRequestList().get(0).getClass().getCanonicalName());
-                    //System.out.println(((OrganProcureWorkRequest)e.getWorkQueue().getWorkRequestList().get(0)).getOrganList().get(0));    
-                }
-                
-            }
-        }*/
-       //System.out.println("**********************************************************88");
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList());//.get(2).getWorkQueue().getWorkRequestList().get(0));
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(2).getWorkQueue().getWorkRequestList().get(0).getReceiver());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(2).getWorkQueue().getWorkRequestList().get(0).getMessage());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(2).getWorkQueue().getWorkRequestList().get(0).getStatus());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(2).getWorkQueue().getWorkRequestList().get(0).getRequestDate());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(2).getWorkQueue().getWorkRequestList().get(0).getResolveDate());
-       
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(1).getOrganizationDirectory().getOrganizationList().get(0).getPatientDirectory().getPatientList().get(0).getDoctor());
-       
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList().get(0).getPatientDirectory());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(1).getOrganizationDirectory().getOrganizationList().get(0).getEmployeeDirectory().getEmployeeList().get(1).getId());
-       //System.out.println(system.getNetworkList().get(0).getName());
-       //System.out.println(system.getNetworkList().get(0).getEnterpriseDirectory().getEnterpriseList().get(0).getOrganizationDirectory().getOrganizationList());
-        //System.out.println();
 
     }
 
@@ -242,21 +184,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btn_donorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_donorActionPerformed
       // TODO add your handling code here:
-//        CardLayout layout=(CardLayout)container.getLayout();
-//            container.add("workArea",userAccount.getRole().createWorkArea(container, userAccount, inOrganization, inEnterprise, system));
-//            layout.next(container);
-//        Enterprise inEnterprise=null;
-//        Organization inOrganization=null;
-        
-        //DonorWorkAreaJPanel donorJPanel = new DonorWorkAreaJPanel(container, inOrganization, inEnterprise, system);
-        //SplitPane.setRightComponent(donorJPanel);
         DonorRegistrationFormJPanel donorWorkAreaJPanel = new DonorRegistrationFormJPanel(container, system, donorDirectory, dB4OUtil);
           container.add("donorWorkAreaJPanel", donorWorkAreaJPanel);
           CardLayout layout=(CardLayout)container.getLayout();
           layout.next(container);
-          
-        //DonorRegistrationFormJPanel donorRegistrationJPanel = new DonorRegistrationFormJPanel((), system, email, city, donorDirectory)
-                                         
+                        
     }//GEN-LAST:event_btn_donorActionPerformed
 
     private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed

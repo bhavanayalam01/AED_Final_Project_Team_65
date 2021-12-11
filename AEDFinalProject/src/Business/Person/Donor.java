@@ -75,7 +75,7 @@ public class Donor {
     }
 
     /**
-     * @param pocContact the pocContact to set
+     * @param donorId
      */
     public void setDonorId(int donorId) {    
         this.donorId = donorId;

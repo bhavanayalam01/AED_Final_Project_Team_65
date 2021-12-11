@@ -2,13 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.AdministrativeRole;
+package ui.AdministrativeRole;
 
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Enterprise.OrganBankEnterprise;
-import Business.Enterprise.GovernmentEnterprise;
-import Business.Enterprise.TherapyEnterprise;
+import Business.Enterprise.Hospital;
+import Business.Enterprise.OrganBank;
+import Business.Enterprise.Government;
+import Business.Enterprise.Therapy;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
 import Business.Organization.OrganizationDirectory;
@@ -43,24 +43,24 @@ public class OrganizationManagementJPanel extends javax.swing.JPanel {
     
     private void initComboBox(){
         cmbxOrganizationType.removeAllItems();
-        cmbxOrganizationType.addItem("--Select--");
+        cmbxOrganizationType.addItem("--Choose--");
         for (Type type : Organization.Type.values()){
             
-             if(enterprise instanceof HospitalEnterprise){
+             if(enterprise instanceof Hospital){
                  if(type.toString().equals("Medical") || type.toString().equals("Diagnostics")){
                  cmbxOrganizationType.addItem(type);}
              }
-             if(enterprise instanceof OrganBankEnterprise){
+             if(enterprise instanceof OrganBank){
                  if(type.toString().equals("Facilities")){
                  cmbxOrganizationType.addItem(type);}
                  
              }
-             if(enterprise instanceof GovernmentEnterprise){
+             if(enterprise instanceof Government){
                  if(type.toString().equals("PoliciesFinance")|| type.toString().equals("AwarnessCampaign")){
                  cmbxOrganizationType.addItem(type);}
                  
              }
-             if(enterprise instanceof TherapyEnterprise){
+             if(enterprise instanceof Therapy){
                  if(type.toString().equals("Therapist")){
                  cmbxOrganizationType.addItem(type);}
                  

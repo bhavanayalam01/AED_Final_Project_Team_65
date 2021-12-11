@@ -128,7 +128,7 @@ public class EcoSystem extends Organization {
     }
     public void addWaitlist(Wait w){
         waitList.add(w);
-        JOptionPane.showMessageDialog(null, "Patient is added to the national waitlist");
+        JOptionPane.showMessageDialog(null, "Patient added to the national waitlist successfully");
     }
     
     public ArrayList<Network> getNetworkList() {

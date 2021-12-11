@@ -9,13 +9,10 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Medical;
-import Business.Organization.Organization;
 import Business.Person.Patient;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.DiagnosticsWorkRequest;
-import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**

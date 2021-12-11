@@ -37,7 +37,6 @@ public class UserAccountDirectory {
         userAccount.setPassword(password);
         userAccount.setEmployee(employee);
         userAccount.setRole(role);
-        //userAccount.setDate(date);
         if(userAccountList.contains(userAccount)){
            // JOptionPane.showMessageDialog(null, "Username Already Exists Please try anothe username");
         }else{
@@ -59,7 +58,6 @@ public class UserAccountDirectory {
         userAccount.setIsAvailable(availability);
         userAccount.setQualifications(qalString);
         userAccount.setIsAvailableforOrgan(organavail);
-        //userAccount.setDate(date);
         userAccountList.add(userAccount);
         return userAccount;
     }

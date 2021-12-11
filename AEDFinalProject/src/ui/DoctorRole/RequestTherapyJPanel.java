@@ -7,7 +7,7 @@ package ui.DoctorRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.TherapyEnterprise;
+import Business.Enterprise.Therapy;
 import Business.Network.Network;
 import Business.Organization.Medical;
 import Business.Organization.Organization;
@@ -286,7 +286,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         for(Network n: ecoSystem.getNetworkList()){
             if(n.getName().equalsIgnoreCase(cb_network.getSelectedItem().toString())){
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e instanceof TherapyEnterprise&&e.getName().equalsIgnoreCase(cb_centers.getSelectedItem().toString())){
+                    if(e instanceof Therapy&&e.getName().equalsIgnoreCase(cb_centers.getSelectedItem().toString())){
                         for(Organization o:e.getOrganizationDirectory().getOrganizationList()){
                             if(o.getName().equalsIgnoreCase(cb_therapy.getSelectedItem().toString())){
                                 orga=o;

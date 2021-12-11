@@ -3,22 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.AdministrativeRole;
+package ui.AdministrativeRole;
 
 import Business.EcoSystem;
-import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.OrganBankEnterprise;
+import Business.Enterprise.OrganBank;
 import Business.Network.Network;
 import Business.Organization.Facilities;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
-import Business.UserAccount.UserAccount;
 import Business.WorkQueue.OrganMatchWorkRequest;
 import Business.WorkQueue.OrganProcureWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -298,7 +295,7 @@ public class OrganManagement extends javax.swing.JPanel {
         for(Network n: ecoSystem.getNetworkList()){
             if(n.getName().equalsIgnoreCase(network.getName())) { 
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e instanceof OrganBankEnterprise){
+                    if(e instanceof OrganBank){
                         if(e.getWorkQueue()== null){
                             System.out.println("catched by repears");
                             break;
@@ -322,23 +319,7 @@ public class OrganManagement extends javax.swing.JPanel {
                 }
             }
             }
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }     
     }
     
     
@@ -351,7 +332,7 @@ public class OrganManagement extends javax.swing.JPanel {
 
             if(n.getName().equalsIgnoreCase(network.getName())) { 
             for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                if(e instanceof OrganBankEnterprise){
+                if(e instanceof OrganBank){
                     if(e.getWorkQueue()== null){
                         System.out.println("catched by repears");
                       break;
@@ -379,40 +360,6 @@ public class OrganManagement extends javax.swing.JPanel {
             }
             }
         }
-        
-               /* row[0] = order;
-                row[1] = order.getCustomer().getName();
-                row[2] = order.getCustomer().getHomeAddress();
-                row[3] = order.getRestaurant().getRestaurantName();
-                row[4] = order.getRestaurant().getAddress();
-                row[5] = order.getOrderStatus();
-                model.addRow(row);*/
-        /**
-         * DefaultTableModel model = (DefaultTableModel) tblDeliveryMan.getModel();
-        model.setRowCount(0);
-       // System.out.println("Hi");
-        //System.out.println(("siva"+userAccount.getEmployee().getName()));
-        for (Order order : business.getOrderDirectory().getOrderDirectory()) {
-            
-            //System.out.println("sai"+userAccount.getUsername());
-            //System.out.println("siva 2");
-           // System.out.println(order.getDeliveryMan()+"Rams");
-           // System.out.println(userAccount.getUsername()+"kioo");
-          
-            
-            if (order.getDeliveryMan().equals(userAccount.getUsername())) {
-               // System.out.println("Vety Imp");
-                Object[] row = new Object[6];
-                row[0] = order;
-                row[1] = order.getCustomer().getName();
-                row[2] = order.getCustomer().getHomeAddress();
-                row[3] = order.getRestaurant().getRestaurantName();
-                row[4] = order.getRestaurant().getAddress();
-                row[5] = order.getOrderStatus();
-                model.addRow(row);
-            }
-        }
-         */
     }
 
 
@@ -429,9 +376,7 @@ public class OrganManagement extends javax.swing.JPanel {
     private javax.swing.JTable tblOrganworkRequests;
     // End of variables declaration//GEN-END:variables
 
-    private void populateTable() {
-        
-    }
+
 
     private void populateComboBox() {
         

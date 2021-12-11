@@ -8,13 +8,11 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.Medical;
 import Business.Organization.Organization;
 import Business.Organization.PoliciesAndFinance;
 import Business.Person.DonorDirectory;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.DoctorRole.DoctorWorkAreaJPanel;
 import ui.HealthOfficer.HealthOfficerJPanel;
 
 /**

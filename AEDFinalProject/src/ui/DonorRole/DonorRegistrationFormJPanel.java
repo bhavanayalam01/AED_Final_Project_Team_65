@@ -7,14 +7,10 @@ package ui.DonorRole;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
-import Business.Employee.EmployeeDirectory;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
+
 import Business.Person.Donor;
 import Business.Person.DonorDirectory;
 import java.awt.CardLayout;
-import java.net.PasswordAuthentication;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -25,7 +21,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.swing.JLabel;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -34,7 +30,7 @@ import javax.swing.JPanel;
 * @author saikr
  */
 public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
- 
+
 
     JPanel userProcessContainer;
     String emailAdd;
@@ -511,7 +507,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
        
 int f = 0;
         String name = txtName.getText();
-        
+
         String sex;
         emailAdd = txtEmailId.getText();
         if (radMale.isSelected()) {
@@ -525,7 +521,7 @@ int f = 0;
         String emergencyPOC = txtEmergencyName.getText();
         String emergencyPOC_Num = txtEmergencyContact.getText();
         String sign = txtSignature.getText();
-       
+
         int age = 30;
         boolean isOrganAvaiNow = false;
         if (radOrganAvailYes.isSelected()) {
@@ -546,7 +542,7 @@ int f = 0;
             return;
         }
         
-       
+
        if(contactNumber == null || contactNumber.equals("")){
                 JOptionPane.showMessageDialog(null, "Please enter Contact Number");
                 return;
@@ -557,6 +553,7 @@ int f = 0;
                      return;
                  }
              }
+
         if (usernamePatternCorrect(emailAdd)) {
             f++;
         } else {
@@ -590,7 +587,7 @@ int f = 0;
         }
 
         Donor d = ecosystem.createDonor(name, age, sex, bloodGroup, contactNumber, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
-       
+
         dB4OUtil.storeSystem(ecosystem);
         JOptionPane.showMessageDialog(null, "Thanks for donation");
         popuser();
@@ -599,48 +596,7 @@ int f = 0;
             JOptionPane.showConfirmDialog(null, "Please enter the right details");
 
         }
-         try {
-            final String username = "saikrishnakotla125@gmail.com";
-            final String password = "7382052184";
 
-            Properties props = new Properties();
-            
-          
-            
-            
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
-            props.put("mail.smtp.host", "smtp.gmail.com");
-            props.put("mail.smtp.port", "587");
-
-            Session session = Session.getInstance(props, new javax.mail.Authenticator() {
-                protected javax.mail.PasswordAuthentication getPasswordAuthentication()  {
-                    if ((username != null) && (username.length() > 0) && (password != null)
-                            && (password.length() > 0)) {
-
-                        return new javax.mail.PasswordAuthentication(username, password);
-                    }
-                    return null;
-
-                }
-            });
-
-            try {
-                Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress("saikrishnakotla125@gmail.com"));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailAdd));
-                message.setSubject("Thank you");
-                message.setText("Thanks for donation");
-                Transport.send(message);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Some Exception Occurred!");
-            }
-
-        } catch (NullPointerException ex) {
-            JOptionPane.showMessageDialog(null, "Null Pointer Exception Occurred!");
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Some Exception Occurred!");
-        }
 
     }//GEN-LAST:event_btnRegister1ActionPerformed
 
