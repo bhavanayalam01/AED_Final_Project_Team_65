@@ -321,7 +321,6 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         btnRegister1.setBackground(new java.awt.Color(204, 204, 204));
         btnRegister1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRegister1.setForeground(new java.awt.Color(255, 0, 51));
-        btnRegister1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/registration_30px.png"))); // NOI18N
         btnRegister1.setText("Register");
         btnRegister1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -447,7 +446,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         //validate();
         String selectedOrgan = organJComboBox.getSelectedItem().toString();
         organList.add((String) organJComboBox.getSelectedItem());
-        if (lblOrgan1.getText() == "") {
+        if ("".equals(lblOrgan1.getText())) {
             lblOrgan1.setText((String) organJComboBox.getSelectedItem());
         } else {
             lblOrgan1.setText(lblOrgan1.getText() + ", " + (String) organJComboBox.getSelectedItem());

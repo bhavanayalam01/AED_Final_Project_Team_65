@@ -171,7 +171,6 @@ public class EnterpriseManagementJPanel extends javax.swing.JPanel {
         btn_Add.setBackground(new java.awt.Color(204, 204, 204));
         btn_Add.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Add.setForeground(new java.awt.Color(255, 0, 51));
-        btn_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add.png"))); // NOI18N
         btn_Add.setText("Add");
         btn_Add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +181,6 @@ public class EnterpriseManagementJPanel extends javax.swing.JPanel {
         btn_back.setBackground(new java.awt.Color(204, 204, 204));
         btn_back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_back.setForeground(new java.awt.Color(255, 0, 51));
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back3.png"))); // NOI18N
         btn_back.setText("Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
