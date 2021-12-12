@@ -7,7 +7,7 @@ package ui.ProcurementTeamRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.OrganBankEnterprise;
+import Business.Enterprise.OrganBank;
 import Business.Network.Network;
 import Business.Organization.Facilities;
 import Business.Organization.OrganManagement;
@@ -189,24 +189,12 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
             return;
         
         }
-        
-      
-       
-           
-           
          
                    if(organization instanceof Facilities){
                        orgwr.setStatus("Completed");
 
                    ((Facilities) organization).setCounter(0);}
-                   
-               
-           
-           
-            
-        
-    
-      
+
      populateTable();  
     }//GEN-LAST:event_btnCompletedActionPerformed
 
@@ -225,7 +213,7 @@ public class ProcurementTeamJPanel extends javax.swing.JPanel {
          for(Network n: ecoSystem.getNetworkList()){
             if(n.getName().equalsIgnoreCase(network.getName())){
             for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                if(e instanceof OrganBankEnterprise){
+                if(e instanceof OrganBank){
                    
                     if(e.getWorkQueue()== null){
                         System.out.println("catched by repears");

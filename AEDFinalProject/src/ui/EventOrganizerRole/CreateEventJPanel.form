@@ -29,52 +29,51 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
+              <Component id="jlblHeading" min="-2" pref="844" max="-2" attributes="0"/>
+              <EmptySpace pref="91" max="32767" attributes="0"/>
+              <Component id="btnBack" min="-2" pref="115" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="307" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jlblEventName" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jlblFunds" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jlblPurpose" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jlblDate" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jlblTime" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jlblVenue" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lbl_amount" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lbl_comment" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txt_comments" pref="191" max="32767" attributes="0"/>
-                              <Component id="txt_amount" max="32767" attributes="0"/>
+                          <Component id="txtVenue" min="-2" pref="191" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="btnCreate" min="-2" pref="121" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txtDate" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="12" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="txtHours" min="-2" pref="71" max="-2" attributes="0"/>
                               <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                              <Component id="txtMInutes" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="txtMinutes" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txtEventName" min="-2" pref="191" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtVenue" min="-2" pref="191" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="btnCreate" min="-2" pref="121" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="txtEvent" alignment="1" pref="191" max="32767" attributes="0"/>
+                          <Component id="txtPurpose" pref="191" max="32767" attributes="0"/>
+                          <Component id="txtFunds" max="32767" attributes="0"/>
+                          <Component id="txtDate" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="12" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel6" min="-2" pref="844" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnBack" min="-2" pref="115" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="Date" min="-2" pref="209" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,59 +87,61 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlblHeading" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEventName" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlblEventName" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEvent" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_comment" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_comments" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jlblPurpose" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPurpose" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_amount" linkSize="2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="lbl_amount" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtFunds" linkSize="2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="jlblFunds" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" linkSize="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDate" linkSize="2" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="jlblDate" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDate" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabel5" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMInutes" linkSize="2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jlblTime" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMinutes" linkSize="2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <Component id="txtHours" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlblVenue" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtVenue" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="Date" linkSize="2" min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="btnCreate" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="382" max="32767" attributes="0"/>
+              <EmptySpace pref="374" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jlblEventName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -149,7 +150,7 @@
         <Property name="text" type="java.lang.String" value="Event Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jlblVenue">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -158,7 +159,7 @@
         <Property name="text" type="java.lang.String" value="Venue:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="jlblHeading">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="1"/>
@@ -170,7 +171,7 @@
         <Property name="text" type="java.lang.String" value="CREATE NEW ORGAN DONATION EVENT"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEventName">
+    <Component class="javax.swing.JTextField" name="txtEvent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="0"/>
@@ -188,7 +189,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVenueActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jlblDate">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -197,7 +198,7 @@
         <Property name="text" type="java.lang.String" value="Date:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="jlblTime">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -214,7 +215,7 @@
         <Property name="text" type="java.lang.String" value="HH"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtMInutes">
+    <Component class="javax.swing.JTextField" name="txtMinutes">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -264,23 +265,23 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_comment">
+    <Component class="javax.swing.JLabel" name="jlblPurpose">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="Purpose: "/>
+        <Property name="text" type="java.lang.String" value="Purpose:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_comments">
+    <Component class="javax.swing.JTextField" name="txtPurpose">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_amount">
+    <Component class="javax.swing.JLabel" name="jlblFunds">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -289,12 +290,14 @@
         <Property name="text" type="java.lang.String" value="Funds Required:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_amount">
+    <Component class="javax.swing.JTextField" name="txtFunds">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="org.netbeans.modules.form.InvalidComponent" name="Date">
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="txtDate">
     </Component>

@@ -377,31 +377,31 @@ public class ProcessDiagnostics extends javax.swing.JPanel {
         
         ArrayList<String> sample= new ArrayList<>();
      
-        if(!(test1=="-"||test1.isBlank()||test1.isEmpty())){
+        if(!(test1=="-"||test1.isEmpty()||test1.isEmpty())){
             sample.add(test1);
         }
-        if(!(test2=="-"||test2.isBlank()||test2.isEmpty())){
+        if(!(test2=="-"||test2.isEmpty()||test2.isEmpty())){
             sample.add(test2);
         }
-        if(!(test3=="-"||test3.isBlank()||test3.isEmpty())){
+        if(!(test3=="-"||test3.isEmpty()||test3.isEmpty())){
             sample.add(test3);
         }
-        if(!(test4=="-"||test4.isBlank()||test4.isEmpty())){
+        if(!(test4=="-"||test4.isEmpty()||test4.isEmpty())){
             sample.add(test4);
         }
-        if(!(test5=="-"||test5.isBlank()||test5.isEmpty())){
+        if(!(test5=="-"||test5.isEmpty()||test5.isEmpty())){
             sample.add(test5);
         }
-        if(!(test6=="-"||test6.isBlank()||test6.isEmpty())){
+        if(!(test6=="-"||test6.isEmpty()||test6.isEmpty())){
             sample.add(test6);
         }
-        if(!(test7=="-"||test7.isBlank()||test7.isEmpty())){
+        if(!(test7=="-"||test7.isEmpty()||test7.isEmpty())){
             sample.add(test7);
         }
-        if(!(test8=="-"||test8.isBlank()||test8.isEmpty())){
+        if(!(test8=="-"||test8.isEmpty()||test8.isEmpty())){
             sample.add(test8);
         }
-        if(!(test9=="-"||test9.isBlank()||test9.isEmpty())){
+        if(!(test9=="-"||test9.isEmpty()||test9.isEmpty())){
             sample.add(test9);
         }
         
