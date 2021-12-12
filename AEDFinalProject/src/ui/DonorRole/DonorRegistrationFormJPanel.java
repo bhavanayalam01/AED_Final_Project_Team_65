@@ -119,8 +119,8 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         lblCity2 = new javax.swing.JLabel();
         txtCity2 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1200, 800));
@@ -145,7 +145,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Gender :");
+        jLabel4.setText("Sex :");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 180, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -160,7 +160,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Email address :");
+        jLabel7.setText("Email-Id :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 180, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -170,7 +170,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setText("Organ to donate :");
+        jLabel9.setText("Organ to donate:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 120, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -273,7 +273,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
                 organJComboBoxActionPerformed(evt);
             }
         });
-        add(organJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 610, 110, -1));
+        add(organJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 610, 140, -1));
         add(lblOrgan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2157, 327, -1, 22));
 
         bloodGroupJComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -301,14 +301,13 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         btnRegister1.setBackground(new java.awt.Color(204, 204, 204));
         btnRegister1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRegister1.setForeground(new java.awt.Color(255, 0, 51));
-        btnRegister1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/registration_30px.png"))); // NOI18N
         btnRegister1.setText("Register");
         btnRegister1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegister1ActionPerformed(evt);
             }
         });
-        add(btnRegister1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 380, 130, 29));
+        add(btnRegister1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 380, 130, 29));
 
         radOrganAvailYes.setBackground(new java.awt.Color(255, 255, 255));
         radOrganAvailYes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -322,7 +321,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel10.setText("Is organ available now :");
+        jLabel10.setText("Is organ available now:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 580, 180, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -395,14 +394,14 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel19.setText("Emergency point of contact ");
         add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 480, -1));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/DonorRole/123.jpg"))); // NOI18N
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 320, 230));
-
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 0, 51));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText(" Every registration counts");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 220, 30));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 220, 30));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/DonorRole/123.jpg"))); // NOI18N
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 120, 300, 220));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
