@@ -49,7 +49,7 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         txtCity.setText(city);
-        txtCity.setEnabled(false);
+        
         this.ecosystem = system;
         this.city = city;
         this.donorDirectory = donorDirectory;
@@ -87,13 +87,13 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        txtFirstName = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
-        txtContactDonor = new javax.swing.JTextField();
+        txtContactNumber = new javax.swing.JTextField();
         txtEmailId = new javax.swing.JTextField();
         txtAddress = new javax.swing.JTextField();
         txtEmergencyName = new javax.swing.JTextField();
-        txtEmergencyContact = new javax.swing.JTextField();
+        txtEmergencyContactNumber = new javax.swing.JTextField();
         txtSignature = new javax.swing.JTextField();
         radMale = new javax.swing.JRadioButton();
         radFemale = new javax.swing.JRadioButton();
@@ -103,24 +103,23 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         bloodGroupJComboBox1 = new javax.swing.JComboBox();
         lblCity = new javax.swing.JLabel();
         txtCity = new javax.swing.JTextField();
-        btnRegister1 = new javax.swing.JButton();
-        radOrganAvailYes = new javax.swing.JRadioButton();
-        radOrganAvailNo = new javax.swing.JRadioButton();
+        btnRegister = new javax.swing.JButton();
+        btnRadioOrganAvailableYes = new javax.swing.JRadioButton();
+        btnRadioOrganAvailableNo = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        txtName1 = new javax.swing.JTextField();
+        txtMiddleName = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        txtName2 = new javax.swing.JTextField();
+        txtLastName = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        txtAddress1 = new javax.swing.JTextField();
+        txtState = new javax.swing.JTextField();
         lblCity1 = new javax.swing.JLabel();
-        txtCity1 = new javax.swing.JTextField();
+        txtSSN = new javax.swing.JTextField();
         lblCity2 = new javax.swing.JLabel();
-        txtCity2 = new javax.swing.JTextField();
+        txtZipCode = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1200, 800));
@@ -194,19 +193,19 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel14.setText("Contact number :");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, 160, 20));
 
-        txtName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName.addActionListener(new java.awt.event.ActionListener() {
+        txtFirstName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
+                txtFirstNameActionPerformed(evt);
             }
         });
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 210, -1));
+        add(txtFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 210, -1));
 
         txtAge.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 210, -1));
 
-        txtContactDonor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        add(txtContactDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 210, -1));
+        txtContactNumber.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        add(txtContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 210, -1));
 
         txtEmailId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         add(txtEmailId, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 210, -1));
@@ -217,13 +216,13 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         txtEmergencyName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         add(txtEmergencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 210, -1));
 
-        txtEmergencyContact.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtEmergencyContact.addActionListener(new java.awt.event.ActionListener() {
+        txtEmergencyContactNumber.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtEmergencyContactNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmergencyContactActionPerformed(evt);
+                txtEmergencyContactNumberActionPerformed(evt);
             }
         });
-        add(txtEmergencyContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 520, 210, -1));
+        add(txtEmergencyContactNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 520, 210, -1));
 
         txtSignature.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         txtSignature.addActionListener(new java.awt.event.ActionListener() {
@@ -298,26 +297,26 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         });
         add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 210, -1));
 
-        btnRegister1.setBackground(new java.awt.Color(204, 204, 204));
-        btnRegister1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnRegister1.setForeground(new java.awt.Color(255, 0, 51));
-        btnRegister1.setText("Register");
-        btnRegister1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegister.setBackground(new java.awt.Color(204, 204, 204));
+        btnRegister.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(255, 0, 51));
+        btnRegister.setText("Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegister1ActionPerformed(evt);
+                btnRegisterActionPerformed(evt);
             }
         });
-        add(btnRegister1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 380, 130, 29));
+        add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 380, 130, 29));
 
-        radOrganAvailYes.setBackground(new java.awt.Color(255, 255, 255));
-        radOrganAvailYes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radOrganAvailYes.setText("Yes");
-        add(radOrganAvailYes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 580, -1, -1));
+        btnRadioOrganAvailableYes.setBackground(new java.awt.Color(255, 255, 255));
+        btnRadioOrganAvailableYes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnRadioOrganAvailableYes.setText("Yes");
+        add(btnRadioOrganAvailableYes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 580, -1, -1));
 
-        radOrganAvailNo.setBackground(new java.awt.Color(255, 255, 255));
-        radOrganAvailNo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        radOrganAvailNo.setText("No");
-        add(radOrganAvailNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 580, -1, -1));
+        btnRadioOrganAvailableNo.setBackground(new java.awt.Color(255, 255, 255));
+        btnRadioOrganAvailableNo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnRadioOrganAvailableNo.setText("No");
+        add(btnRadioOrganAvailableNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 580, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -329,26 +328,26 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel15.setText("Middle Name :");
         add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 180, 20));
 
-        txtName1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName1.addActionListener(new java.awt.event.ActionListener() {
+        txtMiddleName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtMiddleName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtName1ActionPerformed(evt);
+                txtMiddleNameActionPerformed(evt);
             }
         });
-        add(txtName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 210, -1));
+        add(txtMiddleName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 210, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel16.setText("Last Name :");
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 180, 20));
 
-        txtName2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName2.addActionListener(new java.awt.event.ActionListener() {
+        txtLastName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtName2ActionPerformed(evt);
+                txtLastNameActionPerformed(evt);
             }
         });
-        add(txtName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 210, -1));
+        add(txtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 210, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 0, 0));
@@ -360,34 +359,34 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel18.setText("State :");
         add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 180, -1));
 
-        txtAddress1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        add(txtAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 210, -1));
+        txtState.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 210, -1));
 
         lblCity1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCity1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblCity1.setText("Last four digits of SSN :");
         add(lblCity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 180, 20));
 
-        txtCity1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtCity1.addActionListener(new java.awt.event.ActionListener() {
+        txtSSN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSSN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCity1ActionPerformed(evt);
+                txtSSNActionPerformed(evt);
             }
         });
-        add(txtCity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 210, -1));
+        add(txtSSN, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 210, -1));
 
         lblCity2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCity2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblCity2.setText("Zipcode :");
         add(lblCity2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 180, 20));
 
-        txtCity2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtCity2.addActionListener(new java.awt.event.ActionListener() {
+        txtZipCode.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtZipCode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCity2ActionPerformed(evt);
+                txtZipCodeActionPerformed(evt);
             }
         });
-        add(txtCity2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 210, -1));
+        add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 210, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 0, 0));
@@ -398,19 +397,16 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
         jLabel20.setForeground(new java.awt.Color(255, 0, 51));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText(" Every registration counts");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 220, 30));
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/DonorRole/123.jpg"))); // NOI18N
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 120, 300, 220));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 220, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+    private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
+    }//GEN-LAST:event_txtFirstNameActionPerformed
 
-    private void txtEmergencyContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyContactActionPerformed
+    private void txtEmergencyContactNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyContactNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmergencyContactActionPerformed
+    }//GEN-LAST:event_txtEmergencyContactNumberActionPerformed
 
     private void txtSignatureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSignatureActionPerformed
         // TODO add your handling code here:
@@ -503,11 +499,22 @@ public class DonorRegistrationFormJPanel extends javax.swing.JPanel {
     boolean checkforunique() {
         return false;
     }
-    private void btnRegister1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegister1ActionPerformed
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
        
 int f = 0;
-        String name = txtName.getText();
-
+        String name = txtFirstName.getText();
+        String middleName = txtMiddleName.getText();
+        String lastName = txtLastName.getText();
+        String state = txtState.getText();
+        String zipCode = txtZipCode.getText();
+        String ssn = txtSSN.getText();
+        
+        if(middleName == null || middleName.equals("") || lastName == null || lastName.equals("") || state == null || state.equals("") || zipCode == null || zipCode.equals("") || ssn== null || ssn.equals("") ){
+                JOptionPane.showMessageDialog(null, "Please enter field");
+                return;
+        }
+             
+        
         String sex;
         emailAdd = txtEmailId.getText();
         if (radMale.isSelected()) {
@@ -516,17 +523,17 @@ int f = 0;
             sex = radFemale.getText();
         }
         String bloodGroup = bloodGroupJComboBox1.getSelectedItem().toString();
-        String contactNumber = txtContactDonor.getText();
+        String contactNumber = txtContactNumber.getText();
         String address = txtAddress.getText();
         String emergencyPOC = txtEmergencyName.getText();
-        String emergencyPOC_Num = txtEmergencyContact.getText();
+        String emergencyPOC_Num = txtEmergencyContactNumber.getText();
         String sign = txtSignature.getText();
 
         int age = 30;
         boolean isOrganAvaiNow = false;
-        if (radOrganAvailYes.isSelected()) {
+        if (btnRadioOrganAvailableYes.isSelected()) {
             isOrganAvaiNow = true;
-        } else if (radOrganAvailNo.isSelected()) {
+        } else if (btnRadioOrganAvailableNo.isSelected()) {
             isOrganAvaiNow = false;
         }
 
@@ -586,7 +593,7 @@ int f = 0;
             return;
         }
 
-        Donor d = ecosystem.createDonor(name, age, sex, bloodGroup, contactNumber, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
+        Donor d = ecosystem.createDonor(name, middleName, lastName, state, zipCode, ssn, age, sex, bloodGroup, contactNumber, address, sign, emailAdd, emergencyPOC, emergencyPOC_Num, isOrganAvaiNow, organList);
 
         dB4OUtil.storeSystem(ecosystem);
         JOptionPane.showMessageDialog(null, "Thanks for donation");
@@ -598,7 +605,7 @@ int f = 0;
         }
 
 
-    }//GEN-LAST:event_btnRegister1ActionPerformed
+    }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void radFemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radFemaleActionPerformed
         // TODO add your handling code here:
@@ -612,27 +619,29 @@ int f = 0;
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCityActionPerformed
 
-    private void txtName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtName1ActionPerformed
+    private void txtMiddleNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMiddleNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtName1ActionPerformed
+    }//GEN-LAST:event_txtMiddleNameActionPerformed
 
-    private void txtName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtName2ActionPerformed
+    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtName2ActionPerformed
+    }//GEN-LAST:event_txtLastNameActionPerformed
 
-    private void txtCity1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCity1ActionPerformed
+    private void txtSSNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSSNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCity1ActionPerformed
+    }//GEN-LAST:event_txtSSNActionPerformed
 
-    private void txtCity2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCity2ActionPerformed
+    private void txtZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipCodeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCity2ActionPerformed
+    }//GEN-LAST:event_txtZipCodeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox bloodGroupJComboBox1;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnRegister1;
+    private javax.swing.JRadioButton btnRadioOrganAvailableNo;
+    private javax.swing.JRadioButton btnRadioOrganAvailableYes;
+    private javax.swing.JButton btnRegister;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
@@ -648,7 +657,6 @@ int f = 0;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -663,21 +671,19 @@ int f = 0;
     private javax.swing.JComboBox organJComboBox;
     private javax.swing.JRadioButton radFemale;
     private javax.swing.JRadioButton radMale;
-    private javax.swing.JRadioButton radOrganAvailNo;
-    private javax.swing.JRadioButton radOrganAvailYes;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtAddress1;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtCity1;
-    private javax.swing.JTextField txtCity2;
-    private javax.swing.JTextField txtContactDonor;
+    private javax.swing.JTextField txtContactNumber;
     private javax.swing.JTextField txtEmailId;
-    private javax.swing.JTextField txtEmergencyContact;
+    private javax.swing.JTextField txtEmergencyContactNumber;
     private javax.swing.JTextField txtEmergencyName;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtName1;
-    private javax.swing.JTextField txtName2;
+    private javax.swing.JTextField txtFirstName;
+    private javax.swing.JTextField txtLastName;
+    private javax.swing.JTextField txtMiddleName;
+    private javax.swing.JTextField txtSSN;
     private javax.swing.JTextField txtSignature;
+    private javax.swing.JTextField txtState;
+    private javax.swing.JTextField txtZipCode;
     // End of variables declaration//GEN-END:variables
 }

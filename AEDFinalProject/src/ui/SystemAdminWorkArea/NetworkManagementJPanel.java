@@ -40,12 +40,14 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
     }
 
     private void intiNetworkTable() {
-        DefaultTableModel model = (DefaultTableModel) tbl_network.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblNetworkDetails.getModel();
 
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
             Object[] row = new Object[3];
             row[0] = network.getName();
+            row[1] = network.getState();
+            row[2] = network.getZip();
             model.addRow(row);
         }
     }
@@ -62,7 +64,7 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         txtName2 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_network = new javax.swing.JTable();
+        tblNetworkDetails = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btnAddCity = new javax.swing.JButton();
         txtName = new javax.swing.JTextField();
@@ -71,9 +73,9 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtName1 = new javax.swing.JTextField();
+        txtState = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        txtName3 = new javax.swing.JTextField();
+        txtZipCode = new javax.swing.JTextField();
 
         jLabel6.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -85,11 +87,11 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(1200, 800));
         setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        tbl_network.setBackground(new java.awt.Color(255, 204, 204));
-        tbl_network.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tbl_network.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tbl_network.setForeground(new java.awt.Color(255, 0, 51));
-        tbl_network.setModel(new javax.swing.table.DefaultTableModel(
+        tblNetworkDetails.setBackground(new java.awt.Color(255, 204, 204));
+        tblNetworkDetails.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tblNetworkDetails.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tblNetworkDetails.setForeground(new java.awt.Color(255, 0, 51));
+        tblNetworkDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -112,11 +114,11 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tbl_network.setSelectionBackground(new java.awt.Color(255, 102, 102));
-        tbl_network.setSelectionForeground(new java.awt.Color(255, 255, 51));
-        jScrollPane1.setViewportView(tbl_network);
-        if (tbl_network.getColumnModel().getColumnCount() > 0) {
-            tbl_network.getColumnModel().getColumn(0).setResizable(false);
+        tblNetworkDetails.setSelectionBackground(new java.awt.Color(255, 102, 102));
+        tblNetworkDetails.setSelectionForeground(new java.awt.Color(255, 255, 51));
+        jScrollPane1.setViewportView(tblNetworkDetails);
+        if (tblNetworkDetails.getColumnModel().getColumnCount() > 0) {
+            tblNetworkDetails.getColumnModel().getColumn(0).setResizable(false);
         }
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -163,15 +165,15 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("State :");
 
-        txtName1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtState.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtState.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Zipocode :");
+        jLabel7.setText("Zip Code :");
 
-        txtName3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtZipCode.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtZipCode.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -196,11 +198,11 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(txtName3, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(243, 243, 243)
@@ -233,18 +235,15 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
                         .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5)
-                            .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jLabel7))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(txtName3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(txtZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addComponent(btnAddCity, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(393, Short.MAX_VALUE))
+                .addContainerGap(391, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -265,8 +264,12 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
             networkstring.add(name);
             Network network = system.createAndAddNetwork();
             network.setName(name);
+            network.setState(txtState.getText());
+            network.setZip(txtZipCode.getText());
             intiNetworkTable();
             txtName.setText("");
+            txtState.setText("");
+            txtZipCode.setText("");
             }    
         } else {
             JOptionPane.showMessageDialog(null,"No special character allowed");
@@ -294,10 +297,10 @@ public class NetworkManagementJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbl_network;
+    private javax.swing.JTable tblNetworkDetails;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtName1;
     private javax.swing.JTextField txtName2;
-    private javax.swing.JTextField txtName3;
+    private javax.swing.JTextField txtState;
+    private javax.swing.JTextField txtZipCode;
     // End of variables declaration//GEN-END:variables
 }

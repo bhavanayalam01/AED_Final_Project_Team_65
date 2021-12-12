@@ -16,7 +16,60 @@ import java.util.List;
 public class Donor {
     int donorId;
     private String name;
+    private String state;
+    private String zipcode;
+    private String SSN;
+    private String lastName;
+    private String middleName;
     private int age;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public String getSSN() {
+        return SSN;
+    }
+
+    public void setSSN(String SSN) {
+        this.SSN = SSN;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public ArrayList<Organ> getOrganDirectory() {
+        return organDirectory;
+    }
+
+    public void setOrganDirectory(ArrayList<Organ> organDirectory) {
+        this.organDirectory = organDirectory;
+    }
     private String gender;
     private String bloodGroup;
     private String contactNum;

@@ -13,7 +13,7 @@ import Business.Organization.Organization;
 import Business.Person.DonorDirectory;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.LabAssistantRole.DiagnosticsWorkAreaJPanel;
+import ui.LabAssistantRole.DiagnosticsWorkArea;
 
 /**
  *
@@ -23,7 +23,7 @@ public class LabAssistant extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network, DonorDirectory donorDirectory) {
-         return new DiagnosticsWorkAreaJPanel(userProcessContainer, account, (Diagnostics)organization,business,enterprise);
+         return new DiagnosticsWorkArea(userProcessContainer, account, (Diagnostics)organization,business,enterprise);
     }
     
 }

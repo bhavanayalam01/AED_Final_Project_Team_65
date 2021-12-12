@@ -90,14 +90,14 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         boxnetworkJComboBox = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
-        txtUserName = new javax.swing.JTextField();
+        jtxt_u_n = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         boxenterpriseJCombo = new javax.swing.JComboBox();
         btnCreate = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        j_txt_name = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        pwdJPassword = new javax.swing.JPasswordField();
+        j_txt_pwd = new javax.swing.JPasswordField();
         backJButton = new javax.swing.JButton();
         txtheading = new javax.swing.JLabel();
         textEnterprise = new javax.swing.JLabel();
@@ -147,7 +147,7 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Username*:");
 
-        txtUserName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtxt_u_n.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel3.setBackground(new java.awt.Color(153, 153, 153));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -172,10 +172,10 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Password*:");
 
-        txtName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtName.addActionListener(new java.awt.event.ActionListener() {
+        j_txt_name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        j_txt_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
+                j_txt_nameActionPerformed(evt);
             }
         });
 
@@ -184,7 +184,7 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Name*:");
 
-        pwdJPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        j_txt_pwd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         backJButton.setBackground(new java.awt.Color(204, 204, 204));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -256,9 +256,9 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtName)
-                            .addComponent(pwdJPassword)
-                            .addComponent(txtUserName)
+                            .addComponent(j_txt_name)
+                            .addComponent(j_txt_pwd)
+                            .addComponent(jtxt_u_n)
                             .addComponent(boxenterpriseJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(144, 144, 144)
@@ -291,15 +291,15 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtxt_u_n, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(pwdJPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(j_txt_pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(j_txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(updateJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,9 +326,9 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         
         boolean nameMatch=true,userNameMatch=true,passMatch=true;
         Enterprise enterprise = (Enterprise) boxenterpriseJCombo.getSelectedItem();
-        String username = txtUserName.getText();
-        String password = String.valueOf(pwdJPassword.getPassword());
-        String name = txtName.getText();
+        String username = jtxt_u_n.getText();
+        String password = String.valueOf(j_txt_pwd.getPassword());
+        String name = j_txt_name.getText();
         if (name.matches("^([A-Za-z]+)(\\s[A-Za-z]+)*\\s?$")) {
             name = name.trim();
         } else {
@@ -368,9 +368,9 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Enterprise admin added successfully");
         }
         
-        txtUserName.setText("");
-        pwdJPassword.setText("");
-        txtName.setText("");
+        jtxt_u_n.setText("");
+        j_txt_pwd.setText("");
+        j_txt_name.setText("");
         
         
         
@@ -386,9 +386,9 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+    private void j_txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j_txt_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
+    }//GEN-LAST:event_j_txt_nameActionPerformed
 
     private void updateJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateJbuttonActionPerformed
         // TODO add your handling code here:
@@ -399,9 +399,9 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
             return;
         }
         UserAccount user = (UserAccount) enterpriselistJTable.getValueAt(selectedRow, 2);
-        txtUserName.setText(user.getUsername());
-        pwdJPassword.setText(user.getPassword());
-        txtName.setText(user.getEmployee().getName());
+        jtxt_u_n.setText(user.getUsername());
+        j_txt_pwd.setText(user.getPassword());
+        j_txt_name.setText(user.getEmployee().getName());
         btnSave.setEnabled(true);
         
 
@@ -416,11 +416,14 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
             return;
         }
         UserAccount user = (UserAccount) enterpriselistJTable.getValueAt(selectedRow, 2);
-        user.setUsername(txtUserName.getText());
-        user.setPassword(pwdJPassword.getText());
-        user.getEmployee().setName(txtName.getText());
+        user.setUsername(jtxt_u_n.getText());
+        user.setPassword(j_txt_pwd.getText());
+        user.getEmployee().setName(j_txt_name.getText());
         JOptionPane.showMessageDialog(null, "Details Updated Successfully");
         populateTable();
+        jtxt_u_n.setText("");
+        j_txt_pwd.setText("");
+        j_txt_name.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -436,10 +439,10 @@ public class AdminsManagementJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPasswordField pwdJPassword;
+    private javax.swing.JTextField j_txt_name;
+    private javax.swing.JPasswordField j_txt_pwd;
+    private javax.swing.JTextField jtxt_u_n;
     private javax.swing.JLabel textEnterprise;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtUserName;
     private javax.swing.JLabel txtheading;
     private javax.swing.JButton updateJbutton;
     // End of variables declaration//GEN-END:variables

@@ -252,7 +252,7 @@ public class RequestOrganJpanel extends javax.swing.JPanel {
         if(ecoSystem.getWaitList().size()<1){
             score=calculateScore();
         }else{
-            Collections.sort(ecoSystem.getWaitList());
+//            Collections.sort(ecoSystem.getWaitList());
             for(Wait w: ecoSystem.getWaitList()){
                 if(w.getOrgan().equalsIgnoreCase(cb_reqOrgan.getSelectedItem().toString())){
                     score=w.getWaitlist()-1;
