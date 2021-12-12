@@ -74,12 +74,12 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         txt_patID = new javax.swing.JTextField();
         txt_patname = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        cb_network = new javax.swing.JComboBox<String>();
+        cb_network = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         btn_submit = new javax.swing.JButton();
-        cb_centers = new javax.swing.JComboBox<String>();
-        cb_therapy = new javax.swing.JComboBox<String>();
+        cb_centers = new javax.swing.JComboBox<>();
+        cb_therapy = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
@@ -126,7 +126,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         });
 
         cb_centers.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cb_centers.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "--Select--" }));
+        cb_centers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--" }));
         cb_centers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_centersActionPerformed(evt);
@@ -134,7 +134,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         });
 
         cb_therapy.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cb_therapy.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "--Select--" }));
+        cb_therapy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--" }));
         cb_therapy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_therapyActionPerformed(evt);
@@ -217,16 +217,16 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cb_network, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(cb_centers))
-                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_centers, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cb_therapy, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(410, Short.MAX_VALUE))
+                .addContainerGap(431, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
