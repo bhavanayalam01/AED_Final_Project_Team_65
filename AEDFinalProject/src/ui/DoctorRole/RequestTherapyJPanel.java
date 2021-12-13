@@ -237,7 +237,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
             if(cb_network.getSelectedItem().toString().equalsIgnoreCase(n.getName())){
 //                System.out.println("!!Network: "+n+": "+n.getEnterpriseDirectory().getEnterpriseList());
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e.getName().equalsIgnoreCase(cb_centers.getSelectedItem().toString())){
+                    if(e.getName() != null && cb_centers.getSelectedItem() != null && e.getName().equalsIgnoreCase(cb_centers.getSelectedItem().toString())){
                         for(Organization o: e.getOrganizationDirectory().getOrganizationList()){
                             cb_therapy.addItem(o.getName());
                         }
@@ -260,10 +260,14 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         cb_centers.addItem("--Select--");
 //        System.out.println(cb_network.getSelectedItem().toString()+"");
         for(Network n: ecoSystem.getNetworkList()){
+            System.out.println("cb net@@@: "+cb_network.getSelectedItem());
             if(cb_network.getSelectedItem().toString().equalsIgnoreCase(n.getName())){
+                System.out.println("Adding net@@@: "+cb_network.getSelectedItem());
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
+                System.out.println("Adding THer@@@: "+e.getName());
                     if(e.getEnterpriseType().getValue().equalsIgnoreCase("therapy")){
-//                        System.out.println("Adding THer@@@: "+e.getName());
+                        
+                        
                         cb_centers.addItem(e.getName());
                     }
                    
