@@ -73,11 +73,11 @@ public class MainJFrame extends javax.swing.JFrame {
         btn_logout = new javax.swing.JButton();
         container = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        txt_username = new javax.swing.JTextField();
+        txtUserName = new javax.swing.JTextField();
         lbl_username = new javax.swing.JLabel();
         lbl_password = new javax.swing.JLabel();
-        txt_password = new javax.swing.JPasswordField();
-        btn_login = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
+        btnLogin = new javax.swing.JButton();
         btn_donor = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -116,16 +116,16 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 800));
         jPanel2.setLayout(null);
 
-        txt_username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txt_username.setToolTipText("Enter your username");
-        txt_username.setCaretColor(new java.awt.Color(204, 204, 204));
-        txt_username.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtUserName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtUserName.setToolTipText("Enter your username");
+        txtUserName.setCaretColor(new java.awt.Color(204, 204, 204));
+        txtUserName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txt_usernameKeyTyped(evt);
+                txtUserNameKeyTyped(evt);
             }
         });
-        jPanel2.add(txt_username);
-        txt_username.setBounds(440, 248, 250, 30);
+        jPanel2.add(txtUserName);
+        txtUserName.setBounds(440, 248, 250, 30);
 
         lbl_username.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbl_username.setForeground(new java.awt.Color(255, 0, 51));
@@ -139,20 +139,20 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.add(lbl_password);
         lbl_password.setBounds(310, 287, 110, 30);
 
-        txt_password.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel2.add(txt_password);
-        txt_password.setBounds(440, 288, 250, 30);
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(txtPassword);
+        txtPassword.setBounds(440, 288, 250, 30);
 
-        btn_login.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_login.setForeground(new java.awt.Color(255, 0, 51));
-        btn_login.setText("Login");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 0, 51));
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_login);
-        btn_login.setBounds(500, 340, 110, 30);
+        jPanel2.add(btnLogin);
+        btnLogin.setBounds(500, 340, 110, 30);
 
         btn_donor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btn_donor.setForeground(new java.awt.Color(255, 0, 51));
@@ -194,12 +194,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
         btn_logout.setEnabled(false);
         btn_donor.setEnabled(true);
-        txt_username.setEnabled(true);
-        txt_password.setEnabled(true);
-        btn_login.setEnabled(true);
+        txtUserName.setEnabled(true);
+        txtPassword.setEnabled(true);
+        btnLogin.setEnabled(true);
 
-        txt_username.setText("");
-        txt_password.setText("");
+        txtUserName.setText("");
+        txtPassword.setText("");
 
         container.removeAll();
         container.add("jpanel2",jPanel2); 
@@ -208,17 +208,17 @@ public class MainJFrame extends javax.swing.JFrame {
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btn_logoutActionPerformed
 
-    private void txt_usernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usernameKeyTyped
+    private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_txt_usernameKeyTyped
+    }//GEN-LAST:event_txtUserNameKeyTyped
 
-    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // Get user name
        
-        String userName = txt_username.getText();
+        String userName = txtUserName.getText();
         // Get Password
-        char[] passwordCharArray = txt_password.getPassword();
+        char[] passwordCharArray = txtPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
         
         //Step1: Check in the system admin user account directory if you have the user
@@ -273,12 +273,12 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.next(container);
         }
 
-        btn_login.setEnabled(false);
+        btnLogin.setEnabled(false);
         btn_logout.setEnabled(true);
         btn_donor.setEnabled(false);
-        txt_username.setEnabled(false);
-        txt_password.setEnabled(false);
-    }//GEN-LAST:event_btn_loginActionPerformed
+        txtUserName.setEnabled(false);
+        txtPassword.setEnabled(false);
+    }//GEN-LAST:event_btnLoginActionPerformed
 
 
     /**
@@ -317,8 +317,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
     private javax.swing.JButton btn_donor;
-    private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_logout;
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
@@ -328,7 +328,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_password;
     private javax.swing.JLabel lbl_username;
     private javax.swing.JLabel loginJLabel;
-    private javax.swing.JPasswordField txt_password;
-    private javax.swing.JTextField txt_username;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }

@@ -77,7 +77,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCurrentEmployees = new javax.swing.JTable();
-        btnCreate = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -124,13 +124,13 @@ public class EmployeeManagement extends javax.swing.JPanel {
             tblCurrentEmployees.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        btnCreate.setBackground(new java.awt.Color(204, 204, 204));
-        btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnCreate.setForeground(new java.awt.Color(255, 0, 0));
-        btnCreate.setText("Add");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setBackground(new java.awt.Color(204, 204, 204));
+        btnAdd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 0, 0));
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
@@ -185,7 +185,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbxOrganization, 0, 175, Short.MAX_VALUE)
                             .addComponent(txtName)))
                     .addComponent(lblCurrentEMployees)
@@ -214,7 +214,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15)
-                .addComponent(btnCreate)
+                .addComponent(btnAdd)
                 .addGap(37, 37, 37)
                 .addComponent(lblCurrentEMployees)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -223,7 +223,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         boolean check;
         check=cmbxOrganization.getSelectedIndex()>0;
         if(!check){
@@ -249,7 +249,7 @@ public class EmployeeManagement extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Names can't contain numbers or special characters");
         }
         
-    }//GEN-LAST:event_btnCreateActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
 
@@ -263,8 +263,8 @@ public class EmployeeManagement extends javax.swing.JPanel {
     }//GEN-LAST:event_txtNameActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreate;
     private javax.swing.JComboBox cmbxOrganization;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

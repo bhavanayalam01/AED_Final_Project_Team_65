@@ -33,9 +33,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="manageOrganizationJButton" pref="537" max="32767" attributes="0"/>
-                          <Component id="btn_manageEmployees" alignment="1" pref="537" max="32767" attributes="0"/>
-                          <Component id="btn_manageUsers" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnManageOrganization" pref="537" max="32767" attributes="0"/>
+                          <Component id="btnEmployees" alignment="1" pref="537" max="32767" attributes="0"/>
+                          <Component id="btnUserAccounts" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -49,11 +49,11 @@
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-              <Component id="manageOrganizationJButton" min="-2" pref="58" max="-2" attributes="0"/>
+              <Component id="btnManageOrganization" min="-2" pref="58" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btn_manageEmployees" min="-2" pref="53" max="-2" attributes="0"/>
+              <Component id="btnEmployees" min="-2" pref="53" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btn_manageUsers" min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="btnUserAccounts" min="-2" pref="60" max="-2" attributes="0"/>
               <EmptySpace pref="479" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -72,7 +72,7 @@
         <Property name="text" type="java.lang.String" value="ADMIN DASHBOARD"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_manageUsers">
+    <Component class="javax.swing.JButton" name="btnUserAccounts">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -86,10 +86,10 @@
         <Property name="text" type="java.lang.String" value="   Manage User Accounts"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageUsersActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUserAccountsActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="manageOrganizationJButton">
+    <Component class="javax.swing.JButton" name="btnManageOrganization">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -103,10 +103,10 @@
         <Property name="text" type="java.lang.String" value="  Manage Organization"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageOrganizationJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageOrganizationActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_manageEmployees">
+    <Component class="javax.swing.JButton" name="btnEmployees">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -120,7 +120,7 @@
         <Property name="text" type="java.lang.String" value="Manage Employees"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_manageEmployeesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEmployeesActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
