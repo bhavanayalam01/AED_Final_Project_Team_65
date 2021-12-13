@@ -97,9 +97,9 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="lblSex" min="-2" pref="107" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                              <Component id="radMale" min="-2" pref="62" max="-2" attributes="0"/>
+                                              <Component id="btnRadioMale" min="-2" pref="62" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="radFemale" min="-2" pref="62" max="-2" attributes="0"/>
+                                              <Component id="btnRadioFemale" min="-2" pref="62" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -161,8 +161,8 @@
                                   <Component id="txtContactNumber" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblSex" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="radMale" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="radFemale" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnRadioMale" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnRadioFemale" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnCreate" min="-2" pref="31" max="-2" attributes="0"/>
@@ -475,7 +475,7 @@
         <Property name="text" type="java.lang.String" value="Sex*:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radMale">
+    <Component class="javax.swing.JRadioButton" name="btnRadioMale">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -489,7 +489,7 @@
         <Property name="text" type="java.lang.String" value="M"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radFemale">
+    <Component class="javax.swing.JRadioButton" name="btnRadioFemale">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>

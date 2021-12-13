@@ -181,7 +181,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         btn_viewPat = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnNotifyOrgan = new javax.swing.JButton();
         chk_heart = new javax.swing.JCheckBox();
         chk_kidney = new javax.swing.JCheckBox();
         chk_liver = new javax.swing.JCheckBox();
@@ -351,13 +351,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("Organ Waitlist : ");
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 0, 51));
-        jButton2.setText("Notify  organ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnNotifyOrgan.setBackground(new java.awt.Color(204, 204, 204));
+        btnNotifyOrgan.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        btnNotifyOrgan.setForeground(new java.awt.Color(255, 0, 51));
+        btnNotifyOrgan.setText("Notify  organ");
+        btnNotifyOrgan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnNotifyOrganActionPerformed(evt);
             }
         });
 
@@ -468,13 +468,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                                 .addGap(38, 38, 38)
                                 .addComponent(btn_therapist)
                                 .addGap(33, 33, 33)
-                                .addComponent(jButton2))
+                                .addComponent(btnNotifyOrgan))
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 71, Short.MAX_VALUE))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_therapist, jButton2, requestOrganJButton, viewbtn});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnNotifyOrgan, btn_therapist, requestOrganJButton, viewbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -525,12 +525,12 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewbtn)
                     .addComponent(requestOrganJButton)
-                    .addComponent(jButton2)
+                    .addComponent(btnNotifyOrgan)
                     .addComponent(btn_therapist))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_therapist, jButton2, requestOrganJButton, viewbtn});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnNotifyOrgan, btn_therapist, requestOrganJButton, viewbtn});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -641,7 +641,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btn_viewPatActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnNotifyOrganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyOrganActionPerformed
         // TODO add your handling code here:
         boolean check;
         check=workRequestJTable.getSelectedRow()>-1;
@@ -718,7 +718,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         for(int i=size-1;i>-1;i--){
             for(String s: orList){
                 if(s.equalsIgnoreCase(ecosystem.getWaitList().get(i).getOrgan())){
+                    System.out.println("####");
                     loopcounter++;
+                    mr.setStatus("Organ Donated");
                     mr.setRecpatient(ecosystem.getWaitList().get(i).getPatient());
                     mr.setOrgan(ecosystem.getWaitList().get(i).getOrgan());
                     break;
@@ -753,7 +755,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Organ Procurement Requested");
         
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnNotifyOrganActionPerformed
 
     private void btn_therapistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_therapistActionPerformed
         // TODO add your handling code here:
@@ -779,6 +781,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtAgeActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNotifyOrgan;
     private javax.swing.JButton btn_therapist;
     private javax.swing.JButton btn_viewPat;
     private javax.swing.JComboBox cb_patients;
@@ -788,7 +791,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JCheckBox chk_liver;
     private javax.swing.JCheckBox chk_lungs;
     private javax.swing.JCheckBox chk_pancreas;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

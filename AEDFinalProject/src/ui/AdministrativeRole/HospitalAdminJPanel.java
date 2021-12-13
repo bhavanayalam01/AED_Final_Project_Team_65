@@ -49,7 +49,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ADMIN DASHBOARD");
+        jLabel1.setText("HOSPITAL ADMIN DASHBOARD");
 
         btn_manageUsers.setBackground(new java.awt.Color(204, 204, 204));
         btn_manageUsers.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N

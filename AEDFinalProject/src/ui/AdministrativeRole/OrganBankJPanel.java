@@ -41,7 +41,7 @@ public class OrganBankJPanel extends javax.swing.JPanel {
         btn_manageUsers = new javax.swing.JButton();
         manageOrganizationJButton = new javax.swing.JButton();
         btn_manageEmployees = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnViewRequest = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1200, 800));
@@ -49,7 +49,7 @@ public class OrganBankJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ADMIN DASHBOARD");
+        jLabel1.setText("ORGAN BANK ADMIN DASHBOARD");
 
         btn_manageUsers.setBackground(new java.awt.Color(204, 204, 204));
         btn_manageUsers.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -81,13 +81,13 @@ public class OrganBankJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("View Requests");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnViewRequest.setBackground(new java.awt.Color(204, 204, 204));
+        btnViewRequest.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnViewRequest.setForeground(new java.awt.Color(255, 0, 0));
+        btnViewRequest.setText("View Requests");
+        btnViewRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnViewRequestActionPerformed(evt);
             }
         });
 
@@ -103,14 +103,14 @@ public class OrganBankJPanel extends javax.swing.JPanel {
                             .addComponent(btn_manageUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_manageEmployees, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(manageOrganizationJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnViewRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_manageEmployees, btn_manageUsers, jButton1, manageOrganizationJButton});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnViewRequest, btn_manageEmployees, btn_manageUsers, manageOrganizationJButton});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +124,7 @@ public class OrganBankJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(btn_manageUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnViewRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(412, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -151,19 +151,19 @@ public class OrganBankJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btn_manageEmployeesActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnViewRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewRequestActionPerformed
         // TODO add your handling code here:
         OrganManagement pm = new OrganManagement(userProcessContainer, enterprise.getOrganizationDirectory(),enterprise,ecoSystem,network);
         userProcessContainer.add("manageOrgan", pm);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnViewRequestActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnViewRequest;
     private javax.swing.JButton btn_manageEmployees;
     private javax.swing.JButton btn_manageUsers;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton manageOrganizationJButton;
     // End of variables declaration//GEN-END:variables

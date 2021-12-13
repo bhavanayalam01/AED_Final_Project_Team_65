@@ -243,11 +243,11 @@ public class HealthOfficerJPanel extends javax.swing.JPanel {
             if(request instanceof EventWorkRequest){
             Object[] row = new Object[7];
             row[0] = request;
-            row[1] = ((EventWorkRequest) request).getVenue();
-            row[2] = ((EventWorkRequest) request).getDate();
-            row[3] =((EventWorkRequest) request).getTime();
-            row[4] = ((EventWorkRequest) request).getAmount();
-            row[5] = ((EventWorkRequest) request).getComment();
+            row[5] = ((EventWorkRequest) request).getVenue();
+            row[3] = ((EventWorkRequest) request).getDate();
+            row[4] =((EventWorkRequest) request).getTime();
+            row[2] = ((EventWorkRequest) request).getAmount();
+            row[1] = ((EventWorkRequest) request).getComment();
             row[6] = ((EventWorkRequest) request).getStatus();
             
             model.addRow(row);}
