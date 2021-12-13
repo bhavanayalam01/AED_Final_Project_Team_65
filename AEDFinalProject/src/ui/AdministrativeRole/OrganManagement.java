@@ -85,7 +85,7 @@ public class OrganManagement extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "OrgansRequired", "Doctor", "Comments", "Status"
+                "Patient ID", "Patient Name", "Organs", "Doctor", "Comments", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -342,6 +342,7 @@ public class OrganManagement extends javax.swing.JPanel {
                             if(wr instanceof OrganProcureWorkRequest){
                             OrganProcureWorkRequest opr = (OrganProcureWorkRequest)wr;
                             String a ="";
+                            System.out.println("@@@@@@Organ List"+opr.getOrganList());
                             for( String s: opr.getOrganList()){
                                 a= s+";"+a;
                             }

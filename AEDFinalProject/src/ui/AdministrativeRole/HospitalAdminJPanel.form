@@ -75,7 +75,7 @@
           <Color blue="33" green="0" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="ADMIN DASHBOARD"/>
+        <Property name="text" type="java.lang.String" value="HOSPITAL ADMIN DASHBOARD"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btn_manageUsers">

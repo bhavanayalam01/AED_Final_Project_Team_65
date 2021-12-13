@@ -235,6 +235,7 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
         cb_therapy.removeAllItems();
         for(Network n: ecoSystem.getNetworkList()){
             if(cb_network.getSelectedItem().toString().equalsIgnoreCase(n.getName())){
+//                System.out.println("!!Network: "+n+": "+n.getEnterpriseDirectory().getEnterpriseList());
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
                     if(e.getName().equalsIgnoreCase(cb_centers.getSelectedItem().toString())){
                         for(Organization o: e.getOrganizationDirectory().getOrganizationList()){
@@ -254,12 +255,15 @@ public class RequestTherapyJPanel extends javax.swing.JPanel {
 
     private void cb_networkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_networkActionPerformed
         // TODO add your handling code here:
+//        System.out.println("Adding Emter: ");
         cb_centers.removeAllItems();
         cb_centers.addItem("--Select--");
+//        System.out.println(cb_network.getSelectedItem().toString()+"");
         for(Network n: ecoSystem.getNetworkList()){
             if(cb_network.getSelectedItem().toString().equalsIgnoreCase(n.getName())){
                 for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
                     if(e.getEnterpriseType().getValue().equalsIgnoreCase("therapy")){
+//                        System.out.println("Adding THer@@@: "+e.getName());
                         cb_centers.addItem(e.getName());
                     }
                    

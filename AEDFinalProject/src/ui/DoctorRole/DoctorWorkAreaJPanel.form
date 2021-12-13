@@ -96,7 +96,7 @@
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                               <Component id="btn_therapist" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jButton2" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNotifyOrgan" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel4" min="-2" pref="899" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="834" max="-2" attributes="0"/>
@@ -166,7 +166,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="viewbtn" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="requestOrganJButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNotifyOrgan" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_therapist" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="79" max="32767" attributes="0"/>
@@ -488,7 +488,7 @@
         <Property name="text" type="java.lang.String" value="Organ Waitlist : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnNotifyOrgan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -502,7 +502,7 @@
         <Property name="text" type="java.lang.String" value="Notify  organ"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNotifyOrganActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="chk_heart">

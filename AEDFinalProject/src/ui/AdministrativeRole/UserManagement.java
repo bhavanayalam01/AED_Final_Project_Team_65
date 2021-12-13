@@ -139,8 +139,8 @@ public class UserManagement extends javax.swing.JPanel {
         lblAge = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
         lblSex = new javax.swing.JLabel();
-        radMale = new javax.swing.JRadioButton();
-        radFemale = new javax.swing.JRadioButton();
+        btnRadioMale = new javax.swing.JRadioButton();
+        btnRadioFemale = new javax.swing.JRadioButton();
         lblCreateUserAccount = new javax.swing.JLabel();
         lblCurrentAccount = new javax.swing.JLabel();
 
@@ -287,15 +287,15 @@ public class UserManagement extends javax.swing.JPanel {
         lblSex.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblSex.setText("Sex*:");
 
-        radMale.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(radMale);
-        radMale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        radMale.setText("M");
+        btnRadioMale.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(btnRadioMale);
+        btnRadioMale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnRadioMale.setText("M");
 
-        radFemale.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(radFemale);
-        radFemale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        radFemale.setText("F");
+        btnRadioFemale.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(btnRadioFemale);
+        btnRadioFemale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnRadioFemale.setText("F");
 
         lblCreateUserAccount.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblCreateUserAccount.setForeground(new java.awt.Color(255, 0, 51));
@@ -365,9 +365,9 @@ public class UserManagement extends javax.swing.JPanel {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(lblSex, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(27, 27, 27)
-                                                .addComponent(radMale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnRadioMale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(radFemale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                                .addComponent(btnRadioFemale, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(156, 156, 156)
                         .addComponent(lblCreateUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -412,8 +412,8 @@ public class UserManagement extends javax.swing.JPanel {
                                     .addComponent(txtContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8)
                                     .addComponent(lblSex)
-                                    .addComponent(radMale)
-                                    .addComponent(radFemale))
+                                    .addComponent(btnRadioMale)
+                                    .addComponent(btnRadioFemale))
                                 .addGap(18, 18, 18)
                                 .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -437,7 +437,7 @@ public class UserManagement extends javax.swing.JPanel {
                 .addGap(425, 425, 425))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cmbxEmployee, cmbxOrganization, cmbxRole, jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, lblAge, lblSex, radFemale, radMale, txtAddress, txtAge, txtContactNumber, txtPassword, txtQualifications, txtUserName});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnRadioFemale, btnRadioMale, cmbxEmployee, cmbxOrganization, cmbxRole, jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, lblAge, lblSex, txtAddress, txtAge, txtContactNumber, txtPassword, txtQualifications, txtUserName});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -454,11 +454,11 @@ public class UserManagement extends javax.swing.JPanel {
         boolean availability=true;
         boolean organavail = true;
         String age = txtAge.getText();
-        if(radMale.isSelected()){
-            sex = radMale.getText();
+        if(btnRadioMale.isSelected()){
+            sex = btnRadioMale.getText();
         } 
         else {
-            sex = radFemale.getText();
+            sex = btnRadioFemale.getText();
         }
         
         if(address.equals("")){
@@ -536,7 +536,14 @@ public class UserManagement extends javax.swing.JPanel {
         organization.getUserAccountDirectory().createUserAccount(userName,password,phNum,address,qualification, sex, availability, newage, employee, role,organavail);
         popname_id();
         popData();
-       
+        txtUserName.setText("");
+        txtPassword.setText("");
+        txtContactNumber.setText("");
+        txtAddress.setText("");
+        txtQualifications.setText("");
+        txtAge.setText("");
+//        btnRadioMale.setSelected(false);
+//        btnRadioFemale.setSelected(false);
         }
     }//GEN-LAST:event_btnCreateActionPerformed
 
@@ -563,8 +570,8 @@ public class UserManagement extends javax.swing.JPanel {
         // TODO add your handling code here:
         txtAge.setVisible(true);
         lblAge.setVisible(true);
-        radFemale.setVisible(true);
-        radMale.setVisible(true);
+        btnRadioFemale.setVisible(true);
+        btnRadioMale.setVisible(true);
         lblSex.setVisible(true);
 
         
@@ -585,6 +592,8 @@ public class UserManagement extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backjButton1;
     private javax.swing.JButton btnCreate;
+    private javax.swing.JRadioButton btnRadioFemale;
+    private javax.swing.JRadioButton btnRadioMale;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox cmbxEmployee;
     private javax.swing.JComboBox cmbxOrganization;
@@ -602,8 +611,6 @@ public class UserManagement extends javax.swing.JPanel {
     private javax.swing.JLabel lblCreateUserAccount;
     private javax.swing.JLabel lblCurrentAccount;
     private javax.swing.JLabel lblSex;
-    private javax.swing.JRadioButton radFemale;
-    private javax.swing.JRadioButton radMale;
     private javax.swing.JTable tblCurrentAccounts;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
